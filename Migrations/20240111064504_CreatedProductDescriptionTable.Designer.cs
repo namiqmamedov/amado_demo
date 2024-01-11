@@ -3,6 +3,7 @@ using Amado.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Amado.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240111064504_CreatedProductDescriptionTable")]
+    partial class CreatedProductDescriptionTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -157,7 +160,8 @@ namespace Amado.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ProductID");
+                    b.HasIndex("ProductID")
+                        .IsUnique();
 
                     b.ToTable("Descriptions");
                 });
@@ -224,8 +228,8 @@ namespace Amado.Migrations
             modelBuilder.Entity("Amado.Models.ProductDescription", b =>
                 {
                     b.HasOne("Amado.Models.Product", "Product")
-                        .WithMany("Description")
-                        .HasForeignKey("ProductID")
+                        .WithOne("Description")
+                        .HasForeignKey("Amado.Models.ProductDescription", "ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,0 +1,251 @@
+﻿@model ShopVM
+
+        <div class="shop_sidebar_area">
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget catagory mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Catagories</h6>
+
+                <!--  Catagories  -->
+                <div class="catagories-menu">
+                    <ul>
+                        @foreach (Category category in Model.Categories)
+                        {
+                            <li>
+                                <a href="#" class="category-link" data-category-id="@category.ID">
+                                    @category.Name
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget brands mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Brands</h6>
+
+                <div class="widget-desc">
+                    <!-- Single Form Check -->
+                        @foreach (Brand item in Model.Brands)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input brand-checkbox" type="checkbox" data-brand-id="@item.ID" id="brand_@item.ID">
+                                <label class="form-check-label" for="brand_@item.ID">
+                                    @item.Name
+                                </label>
+                            </div>
+                        }
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget color mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Color</h6>
+
+                <div class="widget-desc">
+                    <ul class="d-flex">
+                            @foreach (Color color in Model.Colors)
+                            {
+                                <li><a href="#" class="color@(color.ID) color-main" data-color-id="@color.ID"></a></li>
+                            }
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ##### Single Widget ##### -->
+            <div class="widget price mb-50">
+                <!-- Widget Title -->
+                <h6 class="widget-title mb-30">Price</h6>
+
+                <div class="widget-desc">
+                    <div class="slider-range">
+                        <div id="price-slider" data-min="10" data-max="1000" data-unit="$"></div>
+                        <div class="range-price" id="price-range">$0 - $1000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="amado_product_area section-padding-100">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                            <!-- Total Products -->
+                            <div class="total-products">
+                                <p>Showing 1-8 0f 25</p>
+                                <div class="view d-flex">
+                                    <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <!-- Sorting -->
+                            <div class="product-sorting d-flex">
+                                <div class="sort-by-date d-flex align-items-center mr-15">
+                                    <p>Sort by</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="sortBydate">
+                                            <option value="value">Date</option>
+                                            <option value="value">Newest</option>
+                                            <option value="value">Popular</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div class="view-product d-flex align-items-center">
+                                    <p>View</p>
+                                    <form action="#" method="get">
+                                        <select name="select" id="viewProduct">
+                                            <option value="value">12</option>
+                                            <option value="value">24</option>
+                                            <option value="value">48</option>
+                                            <option value="value">96</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="filteredProducts">
+                    <!-- Single Product Area -->
+                    @await Html.PartialAsync("_FilteredProductPartial",Model.Products)
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <nav aria-label="navigation">
+                            <ul class="pagination justify-content-end mt-50">
+                                <li class="page-item active"><a class="page-link" href="#">01.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03.</a></li>
+                                <li class="page-item"><a class="page-link" href="#">04.</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.brand-checkbox').change(function () {
+                var brandId = $(this).data('brand-id');
+
+                if ($(this).prop('checked')) {
+                    $.ajax({
+                        url: '/Shop/FilterProducts',
+                        type: 'POST',
+                        data: { selectedBrand: brandId },
+                        success: function (data) {
+                            $('#filteredProducts').html(data);
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        url: '/Shop/FilterProducts',
+                        type: 'POST',
+                        data: { selectedBrand: null }, 
+                        success: function (data) {
+                            $('#filteredProducts').html(data);
+                        }
+                    });
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('.category-link').click(function (e) {
+                e.preventDefault();
+        
+                var categoryId = $(this).data('category-id');
+        
+                var selectedCategory = categoryId;
+
+                if ($(this).hasClass('checked')) {
+                    selectedCategory = null;
+                }
+
+                $('.category-link').removeClass('checked');
+
+                $.ajax({
+                    url: '/Shop/FilterProducts',
+                    type: 'POST',
+                    data: { selectedCategory: selectedCategory },
+                    success: function (data) {
+                        $('#filteredProducts').html(data);
+                    }
+                });
+
+                $(this).toggleClass('checked');
+            });
+        });
+
+
+        $(document).ready(function () {
+            $('.color-main').click(function () {
+                var colorId = $(this).data('color-id');
+        
+                var selectedColor = colorId;
+
+                if ($(this).hasClass('checked')) {
+                    selectedColor = null;
+                }
+
+                $('.color-main').removeClass('checked');
+
+                $.ajax({
+                    url: '/Shop/FilterProducts',
+                    type: 'POST',
+                    data: { selectedColor: selectedColor },
+                    success: function (data) {
+                        $('#filteredProducts').html(data);
+                    }
+                });
+
+                $(this).toggleClass('checked');
+            });
+        });
+
+            $(document).ready(function () {
+                $("#price-slider").slider({
+                    range: true,
+                    min: 0,
+                    max: 1000,
+                    values: [10, 1000],
+                    slide: function (event, ui) {
+                        $("#price-range").text("$" + ui.values[0] + " - $" + ui.values[1]);
+
+                        filterProducts(ui.values[0], ui.values[1]);
+                    }
+                });
+
+                filterProducts(10, 1000);
+            });
+
+            function filterProducts(minPrice, maxPrice) {
+                $.ajax({
+                    url: '/Shop/FilterProducts',
+                    type: 'POST',
+                    data: {
+                        minPrice: minPrice,
+                        maxPrice: maxPrice
+                    },
+                    success: function (data) {
+                        $('#filteredProducts').html(data);
+                    }
+                });
+            }
+
+    </script>
+}

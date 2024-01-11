@@ -3,8 +3,6 @@
     ViewData["Title"] = "Update";
     SelectList selectListItems = new SelectList(ViewBag.Brands, nameof(Brand.ID), nameof(Brand.Name));
     SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category.ID), nameof(Category.Name));
-
-
 }
 
 <h1>Update</h1>
@@ -23,6 +21,12 @@
                 <input asp-for="Price" class="form-control" placeholder="Price...">
                 <span class="text-danger" asp-validation-for="Price"></span>
             </div>
+            @foreach (ProductDescription description in Model.Description)
+            {
+                <label asp-for="@description.Text" class="form-label">Description</label>
+                <textarea class="form-control" asp-for="@description.Text" name="ProductDescription[]"></textarea>
+                <span asp-validation-for="@description.Text" class="text text-danger"></span>
+            }
              <div class="form-group">
                 <label asp-for="MainFile" class="form-label">Main Image</label>
                 <input asp-for="MainFile" class="form-control" placeholder="Main Image...">

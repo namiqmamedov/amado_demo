@@ -21,6 +21,15 @@ SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category
          <span class="text-danger" asp-validation-for="Price"></span>
       </div>
       <div class="form-group">
+        @* <label asp-for="Description">Price</label>
+         <input asp-for="Price" placeholder="Price...">
+         <span class="text-danger" asp-validation-for="Price"></span>*@
+         <textarea rows="200" asp-for="ProductDescription">
+
+         </textarea>
+      </div>
+
+      <div class="form-group">
          <label asp-for="MainFile">Main Image</label>
          <input asp-for="MainFile" placeholder="Main Image...">
          <span class="text-danger" asp-validation-for="MainFile"></span>

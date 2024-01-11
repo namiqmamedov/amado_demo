@@ -1,5 +1,4 @@
-﻿using System.Reflection.Metadata;
-
+﻿
 namespace Amado.Models
 {
     public class ProductDescription

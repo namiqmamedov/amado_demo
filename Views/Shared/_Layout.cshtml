@@ -17,7 +17,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="~/assets/css/core-style.css">
     <link rel="stylesheet" href="~/assets/style.css">
-
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -71,7 +71,7 @@
             <nav class="amado-nav">
                 <ul>
                     <li class="active"><a href="~/assets/index.html">Home</a></li>
-                    <li><a href="~/assets/shop.html">Shop</a></li>
+                    <li><a asp-controller="shop" asp-action="index">Shop</a></li>
                     <li><a href="~/assets/product-details.html">Product</a></li>
                     <li><a href="~/assets/cart.html">Cart</a></li>
                     <li><a href="~/assets/checkout.html">Checkout</a></li>
@@ -157,7 +157,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                             <a class="nav-link" href="~/assets/index.html">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="~/assets/shop.html">Shop</a>
+                                            <a class="nav-link" asp-controller="shop" asp-action="index">Shop</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="~/assets/product-details.html">Product</a>
@@ -189,6 +189,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="~/assets/js/plugins.js"></script>
     <!-- Active js -->
     <script src="~/assets/js/active.js"></script>
+
+    @RenderSection("scripts", required: false)
 
 </body>
 

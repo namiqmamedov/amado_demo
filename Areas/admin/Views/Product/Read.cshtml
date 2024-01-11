@@ -1,0 +1,99 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Update";
+    SelectList selectListItems = new SelectList(ViewBag.Brands, nameof(Brand.ID), nameof(Brand.Name));
+    SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category.ID), nameof(Category.Name));
+}
+
+<h1>Update</h1>
+
+<div class="content">
+    <div class="main product-index">
+        <div class="row">
+            <div class="container">
+                 <div class="row justify-content-center col-lg-12">
+                    <div class="form-group col-lg-6">
+                        <label asp-for="Name" class="form-label">Name</label>
+                        <input asp-for="Name" disabled class="form-control" placeholder="Name...">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                     <div class="form-group col-lg-6">
+                        <label asp-for="Price" class="form-label">Price</label>
+                        <input asp-for="Price" disabled class="form-control" placeholder="Price...">
+                        <span class="text-danger" asp-validation-for="Price"></span>
+                    </div>
+                 </div>
+            @foreach (ProductDescription description in Model.Description)
+            {
+                <div class="row justify-center col-lg-12">
+                <div class="form-group col-lg-12">
+                    <label asp-for="@description.Text" class="form-label">Description</label>
+                    <textarea class="form-control" disabled asp-for="@description.Text" name="ProductDescription[]"></textarea>
+                    <span asp-validation-for="@description.Text" class="text text-danger"></span>
+                </div>
+                </div>
+            }
+            <div class="row justify-center col-lg-12">
+                <div class="form-group col-lg-6 ">
+                    <label asp-for="MainFile" class="form-label d-flex">Main Image</label>
+                    <span class="text-danger" asp-validation-for="MainFile"></span>
+
+                    <img class="img-fluid mt-3 w-100 h-50" src="~/assets/img/products/@Model.MainImage"/>
+                </div>
+                   <div class="form-group col-lg-6">
+                    <label asp-for="HoverFile" class="form-label d-flex">Hover Image</label>
+                    <span class="text-danger" asp-validation-for="HoverFile"></span>
+                
+                    <img class="img-fluid mt-3 w-75 h-50" src="~/assets/img/products/@Model.HoverImage"/>
+                </div>
+            </div>
+                <div class="form-group">
+                <label asp-for="Files" class="form-label">Image List</label>
+                
+                <div class="d-flex gap-2 productImages">
+                       @foreach (ProductImage productImage in Model.ProductImages)
+                        {
+                        <div style="width: 12.33%">
+                            <img src="~/assets/img/products/@productImage.Image" class="w-75 h-100" alt="Alternate Text" />
+                        </div>
+                        }
+                </div>
+
+                <span class="text-danger" asp-validation-for="Files"></span>
+            </div>
+                <div class="row justify-center col-lg-12">
+                    <div class="form-group col-lg-6">
+                        <label asp-for="BrandID" class="form-label">Select brand</label>
+                        <select asp-for="BrandID" disabled class="form-select" asp-items=@selectListItems aria-label="Default select example">
+                        </select>
+                        <span class="text-danger" asp-validation-for="BrandID"></span>
+                        </div>
+                         <div class="form-group col-lg-6">
+                        <label asp-for="CategoryID" class="form-label">Select category</label>
+                        <select asp-for="CategoryID" disabled class="form-select" asp-items=@selectListItems2 aria-label="Default select example">
+                        </select>
+                        <span class="text-danger" asp-validation-for="CategoryID"></span>
+                    </div>
+                </div>
+                @if (Model.ProductColors != null)
+                {
+                    @for (int i = 0; i < Model.ProductColors.Count(); i++)
+                    {
+                        <div class="row justify-content-center col-lg-12">
+                            <div class="form-group col-lg-6">
+                                <label>Colors</label>
+                                <select disabled class="form-select" name="ColorIDs[]" asp-items="@new SelectList(ViewBag.Colors, nameof(Color.ID), nameof(Color.Name),  Model.ProductColors[i].Color?.ID)">
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label class="mb-2">Enter Count</label>
+                                <input disabled class="form-control" name="Counts[]" asp-for="@Model.ProductColors[i].Count" placeholder="Enter Count" />
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

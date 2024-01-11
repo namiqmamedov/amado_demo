@@ -24,8 +24,13 @@ namespace Amado.Models
         public int BrandID { get; set; }
         public Brand Brand { get; set; }
 
+        public List<ProductDescription> Description { get; set; }
+
         public List<ProductImage> ProductImages { get; set; }
         public List<ProductColor> ProductColors { get; set; }
+
+        [NotMapped]
+        public List<string> ProductDescription { get; set; } = new List<string>();
 
         [NotMapped]
         public IFormFile MainFile { get; set; }

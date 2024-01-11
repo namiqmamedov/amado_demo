@@ -2,10 +2,9 @@
 using Amado.Extension;
 using Amado.Helpers;
 using Amado.Models;
+using Amado.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
-using System.Runtime.CompilerServices;
 
 namespace Amado.Areas.admin.Controllers
 {
@@ -20,11 +19,11 @@ namespace Amado.Areas.admin.Controllers
             _context = context;
             _env = env;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page)
         {
-            List<Product> products = await _context.Products.Include(x => x.Category).Include(x => x.Brand).ToListAsync();   
+            IQueryable<Product> products =  _context.Products.Include(x => x.Category).Include(x => x.Brand).OrderBy(x=>x.ID);
 
-            return View(products);
+            return View(PageNationList<Product>.Create(products, page, 5));
         }
 
         [HttpGet]
@@ -33,6 +32,7 @@ namespace Amado.Areas.admin.Controllers
             ViewBag.Brands = await _context.Brands.ToListAsync();
             ViewBag.Categories = await _context.Categories.ToListAsync();
             ViewBag.Colors = await _context.Colors.ToListAsync();
+            ViewBag.Description = await _context.Descriptions.Select(x=>x.Text).ToListAsync();
 
             return View();
         }
@@ -44,6 +44,8 @@ namespace Amado.Areas.admin.Controllers
             ViewBag.Brands = await _context.Brands.ToListAsync();
             ViewBag.Categories = await _context.Categories.ToListAsync();
             ViewBag.Colors = await _context.Colors.ToListAsync();
+            ViewBag.Description = await _context.Descriptions.ToListAsync();
+
 
             if (!ModelState.IsValid) return View();
 
@@ -53,6 +55,7 @@ namespace Amado.Areas.admin.Controllers
                 
                 return View();
             }
+
             if(product?.CategoryID == null)
             {
                 ModelState.AddModelError("BrandID", "Select a correct brand");
@@ -181,6 +184,20 @@ namespace Amado.Areas.admin.Controllers
                 product.ProductImages = productImages;
             }
 
+            if (product.ProductDescription != null)
+            {
+                List<ProductDescription> productDescriptions = new List<ProductDescription>();
+                for (int i = 0; i < product.ProductDescription.Count; i++)
+                {
+                    ProductDescription productDescription = new ProductDescription
+                    {
+                        Text = product.ProductDescription[i],
+                    };
+                    productDescriptions.Add(productDescription);
+                }
+                product.Description = productDescriptions;
+            }
+
             product.Name = product.Name.Trim();
             product.Price = product.Price;
             product.Count = productColors.Sum(x => x.Count);
@@ -197,11 +214,11 @@ namespace Amado.Areas.admin.Controllers
             ViewBag.Brands = await _context.Brands.ToListAsync();
             ViewBag.Categories = await _context.Categories.ToListAsync();
             ViewBag.Colors = await _context.Colors.ToListAsync();
-
+            ViewBag.Description = await _context.Descriptions.ToListAsync();
 
             if (ID == null) return BadRequest();
 
-            Product product = await _context.Products.Include(x => x.Category).Include(x => x.Brand).Include(x => x.ProductImages).Include(x=>x.ProductColors).ThenInclude(x=>x.Color).FirstOrDefaultAsync(x => x.ID == ID);
+            Product product = await _context.Products.Include(x => x.Category).Include(x => x.Brand).Include(x => x.ProductImages).Include(x=>x.ProductColors).ThenInclude(x=>x.Color).Include(x=>x.Description).FirstOrDefaultAsync(x => x.ID == ID);
 
             if (product == null) return NotFound();
 
@@ -220,7 +237,7 @@ namespace Amado.Areas.admin.Controllers
 
             if (ID == null) return BadRequest();
 
-            Product products = await _context.Products.Include(x=>x.Category).Include(x=>x.Brand).Include(x=>x.ProductImages).Include(x=>x.ProductColors).ThenInclude(x=>x.Color).FirstOrDefaultAsync(x => x.ID == ID);
+            Product products = await _context.Products.Include(x=>x.Category).Include(x=>x.Brand).Include(x=>x.ProductImages).Include(x=>x.ProductColors).ThenInclude(x=>x.Color).Include(x=>x.Description).FirstOrDefaultAsync(x => x.ID == ID);
 
             if(products == null) return NotFound();
 
@@ -285,6 +302,26 @@ namespace Amado.Areas.admin.Controllers
                 products.ProductColors = productColors;
             }
 
+            if (product.ProductDescription != null)
+            {
+                _context.Descriptions.RemoveRange(products.Description);
+
+                List<ProductDescription> productDescriptions = new List<ProductDescription>();
+
+                for (int i = 0; i < product.ProductDescription.Count; i++)
+                {
+                    if (product.ProductDescription[i] != null)
+                    {
+                        ProductDescription productDescription = new ProductDescription
+                        {
+                            Text = product.ProductDescription[i],
+                        };
+                        productDescriptions.Add(productDescription);
+                    }
+                }
+                product.Description = productDescriptions;
+                products.Description = product.Description;
+            }
 
             if (product.MainFile != null)
             {
@@ -390,6 +427,44 @@ namespace Amado.Areas.admin.Controllers
             Helpers.FileHelper.DeleteFile(_env, productImage.Image);
 
             return PartialView("_ProductImagePartial", product.ProductImages);
+        }
+
+        public async Task<IActionResult> Delete(int? ID,int page)
+        {
+            IQueryable<Product> products = _context.Products.OrderByDescending(x=>x.ID == ID);
+
+            if (ID == null) return BadRequest();
+
+            if (products == null) return NotFound();
+
+            Product product = await _context.Products.FirstOrDefaultAsync(p => p.ID == ID);
+
+            if(product == null) return NotFound();  
+
+            _context.Products.Remove(product);
+
+            await _context.SaveChangesAsync();
+
+            return PartialView("_ProductIndexPartial", PageNationList<Product>.Create(products, page, 5));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Read(int? ID)
+        {
+            ViewBag.Brands = await _context.Brands.ToListAsync();
+            ViewBag.Categories = await _context.Categories.ToListAsync();
+            ViewBag.Colors = await _context.Colors.ToListAsync();
+            ViewBag.Description = await _context.Descriptions.ToListAsync();
+
+            if (ID == null) return BadRequest();
+
+            Product product = await _context.Products.Include(x => x.Category).Include(x => x.Brand).Include(x => x.ProductImages).Include(x => x.ProductColors).ThenInclude(x => x.Color).Include(x => x.Description).FirstOrDefaultAsync(x => x.ID == ID);
+
+            if (product == null) return NotFound();
+
+            product.ColorIDs = await _context.ProductColors.Where(x => x.ProductID == ID).Select(x => x.ColorID).ToListAsync();
+
+            return View(product);
         }
     }
 }

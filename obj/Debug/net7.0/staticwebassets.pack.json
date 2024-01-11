@@ -601,6 +601,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\products\\4495153b-7215-443a-a5b2-ba953ad49ac0_202401101834447283_Untitled.png"
     },
     {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\44ee4020-6dcd-485d-a260-2ac89afe2f2c_202401111100330602_1589948978349.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\products\\44ee4020-6dcd-485d-a260-2ac89afe2f2c_202401111100330602_1589948978349.jpg"
+    },
+    {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\4fb49ac5-0cda-4ddd-b4cc-84eac903f391_202401101552304906_Untitled.png",
       "PackagePath": "staticwebassets\\assets\\img\\products\\4fb49ac5-0cda-4ddd-b4cc-84eac903f391_202401101552304906_Untitled.png"
     },
@@ -619,6 +623,10 @@
     {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\70147bd8-95b5-4d26-a391-06c35554f5b3_202401101552139231_1686658514368.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\products\\70147bd8-95b5-4d26-a391-06c35554f5b3_202401101552139231_1686658514368.jpg"
+    },
+    {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\76db1fe9-6496-45c5-8a3e-4f207fa837f1_202401111100330703_1704301210494.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\products\\76db1fe9-6496-45c5-8a3e-4f207fa837f1_202401111100330703_1704301210494.jpg"
     },
     {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\8032b6fd-3569-4ff7-92e5-c739a7f66dd4_202401101551275747_1589948978349.jpg",
@@ -645,12 +653,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\products\\96b2d282-391c-4f51-adc4-a38e302a5bd5_202401101550053123_1679966644697.jpg"
     },
     {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\9755cfe4-f3fe-4594-a20d-c615545b7ff6_202401111100330749_Untitled.png",
+      "PackagePath": "staticwebassets\\assets\\img\\products\\9755cfe4-f3fe-4594-a20d-c615545b7ff6_202401111100330749_Untitled.png"
+    },
+    {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\991d9538-9745-455e-80bf-75e1fc42ba02_202401101552304829_1589948978349.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\products\\991d9538-9745-455e-80bf-75e1fc42ba02_202401101552304829_1589948978349.jpg"
     },
     {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\c5f53eab-45ad-4913-ac5a-b35a523bd760_202401101551108067_1679966644697.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\products\\c5f53eab-45ad-4913-ac5a-b35a523bd760_202401101551108067_1679966644697.jpg"
+    },
+    {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\cbcecb10-e43c-471f-9c00-b67b9d6ce6b9_202401111100330679_1679966644697.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\products\\cbcecb10-e43c-471f-9c00-b67b9d6ce6b9_202401111100330679_1679966644697.jpg"
     },
     {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\img\\products\\de9b57f7-6987-4961-83d7-9624181f0ca6_202401101551562001_1589948978349.jpg",
