@@ -1,0 +1,87 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Update";
+    SelectList selectListItems = new SelectList(ViewBag.Brands, nameof(Brand.ID), nameof(Brand.Name));
+    SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category.ID), nameof(Category.Name));
+
+
+}
+
+<h1>Update</h1>
+
+<div class="content">
+    <div class="main product-index">
+        <div class="row">
+          <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Name...">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Price" class="form-label">Price</label>
+                <input asp-for="Price" class="form-control" placeholder="Price...">
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="MainFile" class="form-label">Main Image</label>
+                <input asp-for="MainFile" class="form-control" placeholder="Main Image...">
+                <span class="text-danger" asp-validation-for="MainFile"></span>
+
+                <img class="img-fluid mt-3 w-25 h-25" src="~/assets/img/products/@Model.MainImage"/>
+            </div>
+               <div class="form-group">
+                <label asp-for="HoverFile" class="form-label">Hover Image</label>
+                <input asp-for="HoverFile" class="form-control" placeholder="Hover Image...">
+                <span class="text-danger" asp-validation-for="HoverFile"></span>
+                
+                <img class="img-fluid mt-3 w-25 h-25" src="~/assets/img/products/@Model.HoverImage"/>
+            </div>
+                <div class="form-group">
+                <label asp-for="Files" class="form-label">Image List</label>
+                <input asp-for="Files" class="form-control" multiple placeholder="Image List...">
+                
+                <div class="d-flex gap-2 productImages">
+                    @await Html.PartialAsync("_ProductImagePartial", Model.ProductImages)
+                </div>
+
+                <span class="text-danger" asp-validation-for="Files"></span>
+            </div>
+                <div class="form-group">
+                <label asp-for="BrandID" class="form-label">Select brand</label>
+                <select asp-for="BrandID" class="form-select" asp-items=@selectListItems aria-label="Default select example">
+                </select>
+                <span class="text-danger" asp-validation-for="BrandID"></span>
+                </div>
+                 <div class="form-group">
+                <label asp-for="CategoryID" class="form-label">Select category</label>
+                <select asp-for="CategoryID" class="form-select" asp-items=@selectListItems2 aria-label="Default select example">
+                </select>
+                <span class="text-danger" asp-validation-for="CategoryID"></span>
+                </div>
+                @if (Model.ProductColors != null)
+                {
+                    @for (int i = 0; i < Model.ProductColors.Count(); i++)
+                    {
+                        <div class="row justify-content-center">
+                          <div class="select-main row col-lg-12">
+                            <div class="form-group col-lg-4">
+                                <label>Colors</label>
+                                <select class="form-select" name="ColorIDs[]" asp-items="@new SelectList(ViewBag.Colors, nameof(Color.ID), nameof(Color.Name),  Model.ProductColors[i].Color?.ID)">
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label class="mb-2">Enter Count</label>
+                                <input class="form-control" name="Counts[]" asp-for="@Model.ProductColors[i].Count" placeholder="Enter Count" />
+                            </div>
+                          </div>
+                        </div>
+                    }
+                }
+
+                <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+    </div>
+</div>
+
