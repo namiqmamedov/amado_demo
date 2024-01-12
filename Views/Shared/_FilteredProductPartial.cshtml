@@ -1,4 +1,4 @@
-﻿@model List<Product>
+﻿@model PageNationList<Product>
 
 @foreach (Product product in Model)
                     {
@@ -38,3 +38,17 @@
                         </div>
                     </div>
                     }
+
+               <div class="row w-100">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <nav aria-label="navigation">
+                            <ul class="pagination justify-content-end mt-50">
+                                @for (int i = Model.Start; i <= Model.End; i++)
+                                {
+                                    <li class="page-item @(Model.PageIndex == i ? "active" :"")"><a class="page-link" asp-controller="shop" asp-action="index" asp-route-page="@i" data-page="@i">@i</a></li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>

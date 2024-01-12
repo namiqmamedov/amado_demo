@@ -1,4 +1,4 @@
-﻿@model ShopVM
+﻿@model PageNationList<Product>
 
         <div class="shop_sidebar_area">
 
@@ -10,7 +10,7 @@
                 <!--  Catagories  -->
                 <div class="catagories-menu">
                     <ul>
-                        @foreach (Category category in Model.Categories)
+                        @foreach (Category category in ViewBag.Categories)
                         {
                             <li>
                                 <a href="#" class="category-link" data-category-id="@category.ID">
@@ -29,12 +29,12 @@
 
                 <div class="widget-desc">
                     <!-- Single Form Check -->
-                        @foreach (Brand item in Model.Brands)
+                       @foreach (var brand in ViewBag.Brands)
                         {
                             <div class="form-check">
-                                <input class="form-check-input brand-checkbox" type="checkbox" data-brand-id="@item.ID" id="brand_@item.ID">
-                                <label class="form-check-label" for="brand_@item.ID">
-                                    @item.Name
+                                <input class="form-check-input brand-checkbox" type="checkbox" data-brand-id="@brand.ID" id="brand_@brand.ID">
+                                <label class="form-check-label" for="brand_@brand.ID">
+                                    @brand.Name
                                 </label>
                             </div>
                         }
@@ -48,10 +48,10 @@
 
                 <div class="widget-desc">
                     <ul class="d-flex">
-                            @foreach (Color color in Model.Colors)
-                            {
-                                <li><a href="#" class="color@(color.ID) color-main" data-color-id="@color.ID"></a></li>
-                            }
+                        @foreach (Color color in ViewBag.Colors)
+                        {
+                            <li><a href="#" class="color@(color.ID) color-main" data-color-id="@color.ID"></a></li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 <div class="widget-desc">
                     <div class="slider-range">
                         <div id="price-slider" data-min="10" data-max="1000" data-unit="$"></div>
-                        <div class="range-price" id="price-range">$0 - $1000</div>
+                        <div class="range-price" id="price-range">$10 - $1000</div>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         <div class="product-topbar d-xl-flex align-items-end justify-content-between">
                             <!-- Total Products -->
                             <div class="total-products">
-                                <p>Showing 1-8 0f 25</p>
+                                <p>Showing 1-16 0f @Model.TotalItems</p>
                                 <div class="view d-flex">
                                     <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -88,22 +88,21 @@
                             <div class="product-sorting d-flex">
                                 <div class="sort-by-date d-flex align-items-center mr-15">
                                     <p>Sort by</p>
-                                    <form action="#" method="get">
+                                    <form id="viewDateForm" action="#" method="get">
                                         <select name="select" id="sortBydate">
-                                            <option value="value">Date</option>
-                                            <option value="value">Newest</option>
-                                            <option value="value">Popular</option>
+                                            <option value="0">Newest</option>
+                                            <option value="1">Oldest</option>
                                         </select>
                                     </form>
                                 </div>
                                 <div class="view-product d-flex align-items-center">
                                     <p>View</p>
-                                    <form action="#" method="get">
-                                        <select name="select" id="viewProduct">
-                                            <option value="value">12</option>
-                                            <option value="value">24</option>
-                                            <option value="value">48</option>
-                                            <option value="value">96</option>
+                                    <form id="viewProductForm" method="post">
+                                        <select id="viewProduct">
+                                            <option value="0">3</option>
+                                            <option value="1">6</option>
+                                            <option value="2">9</option>
+                                            <option value="3">12</option>
                                         </select>
                                     </form>
                                 </div>
@@ -114,21 +113,7 @@
 
                 <div class="row" id="filteredProducts">
                     <!-- Single Product Area -->
-                    @await Html.PartialAsync("_FilteredProductPartial",Model.Products)
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Pagination -->
-                        <nav aria-label="navigation">
-                            <ul class="pagination justify-content-end mt-50">
-                                <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                                <li class="page-item"><a class="page-link" href="#">04.</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    @await Html.PartialAsync("_FilteredProductPartial",Model)
                 </div>
             </div>
         </div>
@@ -137,7 +122,69 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script>
+        <script>
+
+            $(document).ready(function () {
+                $('#viewProductForm .list').on('click', '.option', function () {
+                    var selectedValue = $(this).data('value');
+
+                    $.ajax({
+                        url: '/Shop/FilterProducts',
+                        type: 'POST',
+                        data: {
+                            pageSize: selectedValue,
+                        },
+                        success: function (data) {
+                            $('#filteredProducts').html(data);
+                        },
+                        error: function (error) {
+                            console.error('FilterProducts error:', error);
+                        }
+                    });
+                });
+            });
+
+            $(document).ready(function () {
+                $('#viewDateForm .list').on('click', '.option', function () {
+                    var selectedValue = $(this).data('value');
+
+                    $.ajax({
+                        url: '/Shop/FilterProducts',
+                        type: 'POST',
+                        data: {
+                            selectedDate: selectedValue,
+                        },
+                        success: function (data) {
+                            $('#filteredProducts').html(data);
+                        },
+                        error: function (error) {
+                            console.error('FilterProducts error:', error);
+                        }
+                    });
+                });
+            });
+
+            $(document).ready(function () {
+                $('#viewProductForm .list').on('click', '.option', function () {
+                    var selectedValue = $(this).data('value');
+
+                    $.ajax({
+                        url: '/Shop/FilterProducts',
+                        type: 'POST',
+                        data: {
+                            pageSize: selectedValue,
+                        },
+                        success: function (data) {
+                            $('#filteredProducts').html(data);
+                        },
+                        error: function (error) {
+                            console.error('FilterProducts error:', error);
+                        }
+                    });
+                });
+            });
+
+
         $(document).ready(function () {
             $('.brand-checkbox').change(function () {
                 var brandId = $(this).data('brand-id');
@@ -155,7 +202,7 @@
                     $.ajax({
                         url: '/Shop/FilterProducts',
                         type: 'POST',
-                        data: { selectedBrand: null }, 
+                        data: { selectedBrand: null},
                         success: function (data) {
                             $('#filteredProducts').html(data);
                         }
@@ -191,7 +238,6 @@
             });
         });
 
-
         $(document).ready(function () {
             $('.color-main').click(function () {
                 var colorId = $(this).data('color-id');
@@ -217,35 +263,56 @@
             });
         });
 
-            $(document).ready(function () {
-                $("#price-slider").slider({
-                    range: true,
-                    min: 0,
-                    max: 1000,
-                    values: [10, 1000],
-                    slide: function (event, ui) {
-                        $("#price-range").text("$" + ui.values[0] + " - $" + ui.values[1]);
+        $(document).ready(function () {
+            var currentPage = getClickedPageNumber();
 
-                        filterProducts(ui.values[0], ui.values[1]);
-                    }
-                });
+            $("#price-slider").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [10, 1000],
+                slide: function (event, ui) {
+                    $("#price-range").text("$" + ui.values[0] + " - $" + ui.values[1]);
 
-                filterProducts(10, 1000);
+                    filterProducts(ui.values[0], ui.values[1], getClickedPageNumber());
+                }
             });
 
-            function filterProducts(minPrice, maxPrice) {
-                $.ajax({
-                    url: '/Shop/FilterProducts',
-                    type: 'POST',
-                    data: {
-                        minPrice: minPrice,
-                        maxPrice: maxPrice
-                    },
-                    success: function (data) {
-                        $('#filteredProducts').html(data);
-                    }
-                });
-            }
+            filterProducts(10, 1000, currentPage);
+        });
+
+        $(document).on("click", ".pagination a.page-link", function (e) {
+            e.preventDefault();
+
+            var clickedPage = $(this).data("page");
+            var minPrice = $("#price-slider").slider("values", 0);
+            var maxPrice = $("#price-slider").slider("values", 1);
+
+            console.log(clickedPage, minPrice, maxPrice);
+
+            filterProducts(minPrice, maxPrice, clickedPage);
+        });
+
+
+        function getClickedPageNumber() {
+            var activePageLink = $(".pagination .page-item.active a.page-link");
+            return activePageLink.length > 0 ? activePageLink.data("page") : 1;
+        }
+
+        function filterProducts(minPrice, maxPrice, page) {
+            $.ajax({
+                url: '/Shop/FilterProducts',
+                type: 'POST',
+                data: {
+                    minPrice: minPrice,
+                    maxPrice: maxPrice,
+                    page: page
+                },
+                success: function (data) {
+                    $('#filteredProducts').html(data);
+                }
+            });
+        }
 
     </script>
 }

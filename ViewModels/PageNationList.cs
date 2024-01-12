@@ -6,6 +6,7 @@
         public PageNationList(IQueryable<T> entities,int page, int totalPages)
         {
             TotalPages = totalPages;
+            TotalItems = entities.Count();
             PageIndex = page;
 
             int start = PageIndex - 2;
@@ -34,7 +35,10 @@
         }
 
         public int TotalPages { get; set; }
+        public int TotalItems { get; set; }
+
         public int PageIndex { get; set; }
+
 
         public bool HasNext => PageIndex < TotalPages;
         public bool HasPrev => PageIndex > 1;
