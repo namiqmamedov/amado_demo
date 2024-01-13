@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9434rjkH3VclozSBa6dShob+eOb6nyb9e172I4Y5uYs=",
+  "Hash": "Fu6MYOJGXQqj6pHPT+bkG7Qjy5yQGqK++03F/euYHKU=",
   "Source": "Amado",
   "BasePath": "_content/Amado",
   "Mode": "Default",
@@ -3041,6 +3041,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\classy-nav.min.js"
+    },
+    {
+      "Identity": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\js\\custom.js",
+      "SourceId": "Amado",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\repos\\C#\\Amado\\wwwroot\\",
+      "BasePath": "_content/Amado",
+      "RelativePath": "assets/js/custom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\custom.js"
     },
     {
       "Identity": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\js\\jquery\\jquery-2.2.4.min.js",

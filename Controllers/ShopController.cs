@@ -25,6 +25,7 @@ namespace Amado.Controllers
             ViewBag.Brands = _context.Brands.ToList();
             ViewBag.Categories = _context.Categories.ToList();
             ViewBag.Colors = _context.Colors.ToList();
+            ViewBag.Products = _context.Products.ToList();
 
             return View(pagedList);
         }
@@ -68,10 +69,6 @@ namespace Amado.Controllers
                 }
             }
 
-            // filteredProducts değişkenini kullanarak devam edin...
-
-
-
             if (selectedColor.HasValue)
             {
                 var productIdsWithSelectedColor = _context.ProductColors
@@ -94,5 +91,12 @@ namespace Amado.Controllers
             return PartialView("_FilteredProductPartial", PageNationList<Product>.Create(resultQueryable, currentPage, 5));
         }
 
+        public async Task<IActionResult> SearchProduct(string search)
+        {
+            List<Product> products = await _context.Products
+           .Where(p => p.Name.ToLower().Contains(search.Trim().ToLower())).Take(6).ToListAsync();
+
+            return PartialView("_SearchPartial", products);
+        }
     }
 }

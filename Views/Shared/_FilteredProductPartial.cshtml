@@ -46,7 +46,9 @@
                             <ul class="pagination justify-content-end mt-50">
                                 @for (int i = Model.Start; i <= Model.End; i++)
                                 {
-                                    <li class="page-item @(Model.PageIndex == i ? "active" :"")"><a class="page-link" asp-controller="shop" asp-action="index" asp-route-page="@i" data-page="@i">@i</a></li>
+                                    <li class="page-item @(Model.PageIndex == i ? "active" :"")">
+                                        <a class="page-link" asp-controller="shop" asp-action="index" asp-route-page="@i" data-page="@i">@i</a>
+                                    </li>
                                 }
                             </ul>
                         </nav>

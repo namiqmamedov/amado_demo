@@ -43,8 +43,8 @@
         public bool HasNext => PageIndex < TotalPages;
         public bool HasPrev => PageIndex > 1;
 
-        public int Start { get; }
-        public int End { get; }
+        public int Start { get; private set; }
+        public int End { get; private set; }
 
         public static PageNationList<T> Create(IQueryable<T> entities, int page, int pageItemCount) 
         {
@@ -59,5 +59,6 @@
 
             return new PageNationList<T>(entities, page, totalPages);
         }
+
     }
 }

@@ -31,7 +31,12 @@
                 <div class="col-12">
                     <div class="search-content">
                         <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                            <input type="search" name="search" class="searchInput" data-url="/shop/searchproduct" id="search" placeholder="Type your keyword...">
+                            <div class="search-body d-none" style="position: absolute;width: 100%;z-index:999;background-color: white;top: 100%;border: 1px solid black;">
+                                 <ul class="list-group">
+                                      
+                                 </ul>
+                            </div>
                             <button type="submit"><img src="~/assets/img/core-img/search.png" alt=""></button>
                         </form>
                     </div>
@@ -180,6 +185,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="~/assets/js/custom.js"></script>
+
     <script src="~/assets/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="~/assets/js/popper.min.js"></script>

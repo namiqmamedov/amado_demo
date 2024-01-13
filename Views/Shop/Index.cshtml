@@ -78,7 +78,7 @@
                         <div class="product-topbar d-xl-flex align-items-end justify-content-between">
                             <!-- Total Products -->
                             <div class="total-products">
-                                <p>Showing 1-16 0f @Model.TotalItems</p>
+                                <p id="data-brain" data-start="@Model.Start" data-totalItems="@Model.TotalItems">Showing @Model.Start-@Model.TotalItems 0f @ViewBag.Products.Count</p>
                                 <div class="view d-flex">
                                     <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -119,10 +119,30 @@
         </div>
 
 @section scripts {
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         <script>
+
+            $(document).ready(function () {
+                var dataBrain = $("#data-brain");
+
+                $(document).on("click", ".pagination a.page-link", function (e) {
+
+                    var clickedPage = $(this).data("page");
+
+                    e.preventDefault();
+
+                    var pageSize = 5; 
+
+                    var start = (clickedPage - 1) * pageSize + 1;
+                    var end = start + pageSize - 1;
+                    var totalItems = @ViewBag.Products.Count;
+
+                    var newDisplayInfo = "Showing " + start + "-" + end + " of " + totalItems;
+
+
+                    dataBrain.text(newDisplayInfo);
+                });
+            });
 
             $(document).ready(function () {
                 $('#viewProductForm .list').on('click', '.option', function () {
@@ -165,7 +185,7 @@
             });
 
             $(document).ready(function () {
-                $('#viewProductForm .list').on('click', '.option', function () {
+                $('#viewProductForm .list').on('click', '.option.selected', function () {
                     var selectedValue = $(this).data('value');
 
                     $.ajax({
@@ -212,9 +232,11 @@
         });
 
         $(document).ready(function () {
+            var dataBrain = $("#data-brain");
+
             $('.category-link').click(function (e) {
                 e.preventDefault();
-        
+
                 var categoryId = $(this).data('category-id');
         
                 var selectedCategory = categoryId;
@@ -246,9 +268,10 @@
 
                 if ($(this).hasClass('checked')) {
                     selectedColor = null;
+                    $(this).removeClass("checked");
+                } else {
+                    $(this).addClass("checked");
                 }
-
-                $('.color-main').removeClass('checked');
 
                 $.ajax({
                     url: '/Shop/FilterProducts',
@@ -258,8 +281,6 @@
                         $('#filteredProducts').html(data);
                     }
                 });
-
-                $(this).toggleClass('checked');
             });
         });
 
@@ -285,28 +306,52 @@
             e.preventDefault();
 
             var clickedPage = $(this).data("page");
+
+            var selectedOption = $("#viewDateForm .list .option.focus.selected");
+            var dataValue = selectedOption.data("value");
+
+            var selectedOption1 = $("#viewProductForm .list .option.selected.checked");
+            var dataValue1 = selectedOption1.data("value");
+
+            var colorMain = $(".color-main.checked");
+            var colorValue = colorMain.data("color-id");
+
+            var categoryLink = $(".category-link.checked");
+            var categoryValue = categoryLink.data("category-id");
+
+            var brandCheckbox = $(".brand-checkbox");
+            var brandValue = brandCheckbox.data("brand-id");
+
             var minPrice = $("#price-slider").slider("values", 0);
             var maxPrice = $("#price-slider").slider("values", 1);
 
-            console.log(clickedPage, minPrice, maxPrice);
-
-            filterProducts(minPrice, maxPrice, clickedPage);
+            filterProducts(minPrice, maxPrice, clickedPage,dataValue,dataValue1,colorValue,categoryValue,brandValue);
         });
 
+        $(document).on("click", "#viewProductForm .list .option", function () {
+            $("#viewProductForm .list .option").removeClass("checked");
+
+            $(this).addClass("checked");
+        });
 
         function getClickedPageNumber() {
             var activePageLink = $(".pagination .page-item.active a.page-link");
             return activePageLink.length > 0 ? activePageLink.data("page") : 1;
         }
 
-        function filterProducts(minPrice, maxPrice, page) {
+        function filterProducts(minPrice, maxPrice, page,dataValue,dataValue1,colorValue,categoryValue,brandValue) {
             $.ajax({
                 url: '/Shop/FilterProducts',
                 type: 'POST',
                 data: {
                     minPrice: minPrice,
                     maxPrice: maxPrice,
-                    page: page
+                    page: page,
+                    selectedDate: dataValue,
+                    pageSize: dataValue1,
+                    selectedColor: colorValue,
+                    selectedCategory: categoryValue,
+                    selectedBrand: brandValue
                 },
                 success: function (data) {
                     $('#filteredProducts').html(data);

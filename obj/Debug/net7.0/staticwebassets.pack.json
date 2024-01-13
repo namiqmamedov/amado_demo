@@ -709,6 +709,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\classy-nav.min.js"
     },
     {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\js\\jquery\\jquery-2.2.4.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery\\jquery-2.2.4.min.js"
     },
