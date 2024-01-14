@@ -17,7 +17,7 @@
                                 <div class="product-meta-data">
                                     <div class="line"></div>
                                     <p class="product-price">$@product.Price</p>
-                                    <a href="product-details.html">
+                                    <a href="product-details.html" id="productName">
                                         <h6>@product.Name</h6>
                                     </a>
                                 </div>
@@ -31,7 +31,9 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                     </div>
                                     <div class="cart">
-                                        <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                        <a asp-controller="cart" asp-action="addToCart" asp-route-id="@product.ID" class="addToCart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                                            <img src="~/assets/img/core-img/cart.png" alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -54,3 +56,21 @@
                         </nav>
                     </div>
                 </div>
+
+
+   <script>
+           $(document).ready(function () {
+                  $('.addToCart').click(function (e) {
+                      e.preventDefault();
+
+                      let url = $(this).attr('href');
+
+                      fetch(url).then(res => res.text())
+                          .then(data => {
+                              $('#cart-info').html(data);
+                          });
+                  })
+              });
+
+   </script>
+

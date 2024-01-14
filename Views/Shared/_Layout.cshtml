@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿
+@inject ILayoutServices layoutservices
+
+@{
+    List<CartVM> cartVMs = await layoutservices.GetCart();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,6 +24,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="~/assets/css/core-style.css">
     <link rel="stylesheet" href="~/assets/style.css">
+    <link rel="stylesheet" href="~/assets/custom.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
@@ -78,7 +86,7 @@
                     <li class="active"><a href="~/assets/index.html">Home</a></li>
                     <li><a asp-controller="shop" asp-action="index">Shop</a></li>
                     <li><a href="~/assets/product-details.html">Product</a></li>
-                    <li><a href="~/assets/cart.html">Cart</a></li>
+                    <li><a asp-controller="cart" asp-action="index">Cart</a></li>
                     <li><a href="~/assets/checkout.html">Checkout</a></li>
                 </ul>
             </nav>
@@ -89,7 +97,9 @@
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="~/assets/cart.html" class="cart-nav"><img src="~/assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
+                <div id="cart-info">
+                    @await Html.PartialAsync("_CartPartial",cartVMs)
+                </div>
                 <a href="#" class="fav-nav"><img src="~/assets/img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="~/assets/img/core-img/search.png" alt=""> Search</a>
             </div>
@@ -168,10 +178,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                             <a class="nav-link" href="~/assets/product-details.html">Product</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="~/assets/cart.html">Cart</a>
+                                            <a class="nav-link" asp-controller="cart" asp-action="cart">Cart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="~/assets/checkout.html">Checkout</a>
+                                            <a class="nav-link" asp-controller="checkout" asp-action="index">Checkout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -188,7 +198,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
-    <script src="~/assets/js/custom.js"></script>
+    <script src="~/assets/js/custom.js" asp-append-version="true"></script>
 
     <script src="~/assets/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -201,6 +211,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="~/assets/js/active.js"></script>
 
     @RenderSection("scripts", required: false)
+    @RenderSection("partialScripts", required: false)
 
 </body>
 

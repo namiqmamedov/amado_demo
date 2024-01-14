@@ -1,0 +1,13 @@
+﻿@model List<CartVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+  <div class="cart-table-area section-padding-100">
+      <div class="container-fluid">
+          <div class="row" id="cartIndex">
+              @await Html.PartialAsync("_CartIndexPartial",Model)
+          </div>
+      </div>
+  </div>

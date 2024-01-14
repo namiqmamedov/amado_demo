@@ -1,0 +1,78 @@
+﻿@model List<CartVM>
+
+@if (Model.Count() > 0)
+{
+    <div class="col-12 col-lg-8">
+    <div class="cart-title mt-50">
+        <h2>Shopping Cart</h2>
+    </div>
+
+    <div class="cart-table clearfix">
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (CartVM cart in Model)
+                                        {
+                                                <tr>
+                                                    <td class="cart_product_img">
+                                                        <a href="#"><img src="~/assets/img/products/@cart.Image" alt="Product"></a>
+                                                    </td>
+                                                    <td class="cart_product_desc">
+                                                        <h5>@cart.Title</h5>
+                                                    </td>
+                                                    <td class="price">
+                                                        <span>$@cart.Price</span>
+                                                    </td>
+                                                    <td class="qty">
+                                                        <div class="qty-btn d-flex align-items-center">
+                                                            <p>Qty</p>
+                                                            <div class="quantity">
+                                                                <a class="qty-minus minusCount" asp-controller="cart" asp-action="UpdateCount" asp-route-id="@cart.ProductID" >
+                                                                    <i class="fa fa-minus" aria-hidden="true">
+                                                                    </i>
+                                                                </a>
+                                                                <input type="number" class="qty-text" id="qty inputCount" step="1" min="1" max="300" name="quantity" value="@cart.Count">
+                                                                <a class="qty-plus plusCount" asp-controller="cart" asp-action="UpdateCount" asp-route-id="@cart.ProductID">
+                                                                    <i class="fa fa-plus" aria-hidden="true">
+                                                                    </i>
+                                                                </a>
+                                                            </div>
+                                                        <a class="remove-item" asp-controller="cart" asp-action="removecart" asp-route-id="@cart.ProductID">
+                                                            <div class="item-icon ml-3">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><path d="M20 9v12a2 2 0 01-2 2H6a2 2 0 01-2-2V9M1 5h22M12 12v6M8 12v6M16 12v6M8 5V1h8v4"></path></g></svg>
+                                                            </div>
+                                                        </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+    </div>
+    <div class="col-12 col-lg-4">
+                            <div class="cart-summary">
+                                <h5>Cart Total</h5>
+                                <ul class="summary-table">
+                                          <li><span>delivery:</span> <span>Free</span></li>
+                                          <li><span>total:</span> <span>$@(Model.Sum(x => x.Count * x.Price).ToString("0.##"))</span></li>
+                                </ul>
+                                <div class="cart-btn mt-100">
+                                    <a href="cart.html" class="btn amado-btn w-100">Checkout</a>
+                                </div>
+                            </div>
+        </div>
+}
+
+else
+{
+    <h3>Your shopping cart is empty.</h3>
+}
+

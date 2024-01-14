@@ -1638,7 +1638,7 @@ img {
 
 /* :: 10.0 Checkout Area CSS */
 
-.checkout_details_area form {
+.checkout_details_area {
     .form-control {
         height: 60px;
         border: none;
@@ -1648,15 +1648,18 @@ img {
         color: #6b6b6b;
         font-size: 14px;
     }
+
     textarea.form-control {
         height: 210px;
     }
+
     .custom-control {
         label {
             font-size: 14px;
             color: #6b6b6b;
         }
     }
+
     .nice-select {
         border-radius: 0;
         height: 60px;
@@ -1665,6 +1668,7 @@ img {
         border: none;
         color: #6b6b6b;
         font-size: 14px;
+
         .list {
             width: 100%;
             border-radius: 0;
@@ -1674,3 +1678,4 @@ img {
 }
 
 /* ##### The End ##### */
+

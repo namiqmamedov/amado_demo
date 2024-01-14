@@ -413,6 +413,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\owl.carousel.css"
     },
     {
+      "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\custom.css",
+      "PackagePath": "staticwebassets\\assets\\custom.css"
+    },
+    {
       "Id": "D:\\repos\\C#\\Amado\\wwwroot\\assets\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\assets\\fonts\\FontAwesome.otf"
     },

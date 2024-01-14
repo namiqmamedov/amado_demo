@@ -16,5 +16,7 @@ namespace Amado.DAL
         public DbSet<Color> Colors { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductDescription> Descriptions { get; set; }
+        public DbSet<Checkout> Checkouts { get; set; }
+        public DbSet<Country> Countries { get; set; }
     }
 }

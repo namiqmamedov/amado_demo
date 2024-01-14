@@ -1,0 +1,34 @@
+﻿.checkout_details_area .form-control {
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    background-color: #f5f7fa;
+    padding: 30px;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.checkout_details_area textarea.form-control {
+    height: 210px;
+}
+
+.checkout_details_area .custom-control label {
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.checkout_details_area .nice-select {
+    border-radius: 0;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f7fa;
+    border: none;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+    .checkout_details_area .nice-select .list {
+        width: 100%;
+        border-radius: 0;
+        background-color: #f5f7fa;
+    }

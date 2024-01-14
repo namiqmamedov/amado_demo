@@ -123,6 +123,7 @@
         <script>
 
             $(document).ready(function () {
+
                 var dataBrain = $("#data-brain");
 
                 $(document).on("click", ".pagination a.page-link", function (e) {
@@ -232,20 +233,17 @@
         });
 
         $(document).ready(function () {
-            var dataBrain = $("#data-brain");
-
-            $('.category-link').click(function (e) {
-                e.preventDefault();
-
+            $('.category-link').click(function () {
                 var categoryId = $(this).data('category-id');
         
                 var selectedCategory = categoryId;
 
                 if ($(this).hasClass('checked')) {
                     selectedCategory = null;
+                    $(this).removeClass("checked");
+                } else {
+                    $(this).addClass("checked");
                 }
-
-                $('.category-link').removeClass('checked');
 
                 $.ajax({
                     url: '/Shop/FilterProducts',
@@ -255,8 +253,6 @@
                         $('#filteredProducts').html(data);
                     }
                 });
-
-                $(this).toggleClass('checked');
             });
         });
 
