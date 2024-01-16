@@ -20,7 +20,7 @@ namespace Amado.Controllers
         {
             IQueryable<Product> products = _context.Products.Include(x => x.Category).Include(x => x.Brand).OrderBy(x => x.ID);
 
-            var pagedList = PageNationList<Product>.Create(products, page, 5);
+            var pagedList = PageNationList<Product>.Create(products, page, 6);
 
             ViewBag.Brands = _context.Brands.ToList();
             ViewBag.Categories = _context.Categories.ToList();
@@ -28,6 +28,27 @@ namespace Amado.Controllers
             ViewBag.Products = _context.Products.ToList();
 
             return View(pagedList);
+        }
+
+        public async Task<IActionResult> Detail(int? ID)
+        {
+            if (ID == null) return BadRequest();
+
+            ShopVM shopVM = new ShopVM
+            {
+                Product = await _context.Products
+                .Include(x => x.ProductImages)
+                .Include(x => x.Description)
+                .Include(x => x.Brand)
+                .Include(x => x.Category)
+                .FirstOrDefaultAsync(x => x.ID == ID),
+
+                Products = await _context.Products.Where(x => x.ID == ID).ToListAsync(),
+            };
+
+            if (shopVM == null) return NotFound();
+
+            return View(shopVM);
         }
 
         [HttpPost]
@@ -88,7 +109,7 @@ namespace Amado.Controllers
 
             var resultQueryable = result.AsQueryable();
 
-            return PartialView("_FilteredProductPartial", PageNationList<Product>.Create(resultQueryable, currentPage, 5));
+            return PartialView("_FilteredProductPartial", PageNationList<Product>.Create(resultQueryable, currentPage, 6));
         }
 
         public async Task<IActionResult> SearchProduct(string search)

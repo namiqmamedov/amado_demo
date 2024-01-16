@@ -1,5 +1,9 @@
 ﻿@model PageNationList<Product>
 
+@{
+    int colorIndex = 1;
+}
+
         <div class="shop_sidebar_area">
 
             <!-- ##### Single Widget ##### -->
@@ -50,7 +54,8 @@
                     <ul class="d-flex">
                         @foreach (Color color in ViewBag.Colors)
                         {
-                            <li><a href="#" class="color@(color.ID) color-main" data-color-id="@color.ID"></a></li>
+                            <li><a href="#" class="color@(colorIndex) color-main" data-color-id="@color.ID"></a></li>
+                            colorIndex++;
                         }
                     </ul>
                 </div>
@@ -90,6 +95,7 @@
                                     <p>Sort by</p>
                                     <form id="viewDateForm" action="#" method="get">
                                         <select name="select" id="sortBydate">
+                                            <option selected disabled>Date</option>
                                             <option value="0">Newest</option>
                                             <option value="1">Oldest</option>
                                         </select>
@@ -99,6 +105,7 @@
                                     <p>View</p>
                                     <form id="viewProductForm" method="post">
                                         <select id="viewProduct">
+                                            <option selected disabled>Choose</option>
                                             <option value="0">3</option>
                                             <option value="1">6</option>
                                             <option value="2">9</option>
@@ -122,28 +129,28 @@
 
         <script>
 
-            $(document).ready(function () {
+            //$(document).ready(function () {
 
-                var dataBrain = $("#data-brain");
+            //    var dataBrain = $("#data-brain");
 
-                $(document).on("click", ".pagination a.page-link", function (e) {
+            //    $(document).on("click", ".pagination a.page-link", function (e) {
 
-                    var clickedPage = $(this).data("page");
+            //        var clickedPage = $(this).data("page");
 
-                    e.preventDefault();
+            //        e.preventDefault();
 
-                    var pageSize = 5; 
+            //        var pageSize = 5; 
 
-                    var start = (clickedPage - 1) * pageSize + 1;
-                    var end = start + pageSize - 1;
-                    var totalItems = @ViewBag.Products.Count;
+            //        var start = (clickedPage - 1) * pageSize + 1;
+            //        var end = start + pageSize - 1;
+            //        var totalItems = @ViewBag.Products.Count;
 
-                    var newDisplayInfo = "Showing " + start + "-" + end + " of " + totalItems;
+            //        var newDisplayInfo = "Showing " + start + "-" + end + " of " + totalItems;
 
 
-                    dataBrain.text(newDisplayInfo);
-                });
-            });
+            //        dataBrain.text(newDisplayInfo);
+            //    });
+            //});
 
             $(document).ready(function () {
                 $('#viewProductForm .list').on('click', '.option', function () {
@@ -210,25 +217,23 @@
             $('.brand-checkbox').change(function () {
                 var brandId = $(this).data('brand-id');
 
-                if ($(this).prop('checked')) {
-                    $.ajax({
-                        url: '/Shop/FilterProducts',
-                        type: 'POST',
-                        data: { selectedBrand: brandId },
-                        success: function (data) {
-                            $('#filteredProducts').html(data);
-                        }
-                    });
+                var selectedBrand = brandId;
+
+                if ($(this).hasClass('checked')) {
+                    selectedBrand = null;
+                    $(this).removeClass("checked");
                 } else {
-                    $.ajax({
-                        url: '/Shop/FilterProducts',
-                        type: 'POST',
-                        data: { selectedBrand: null},
-                        success: function (data) {
-                            $('#filteredProducts').html(data);
-                        }
-                    });
+                    $(this).addClass("checked");
                 }
+
+                $.ajax({
+                    url: '/Shop/FilterProducts',
+                    type: 'POST',
+                    data: { selectedBrand: selectedBrand },
+                    success: function (data) {
+                        $('#filteredProducts').html(data);
+                    }
+                });
             });
         });
 
@@ -315,7 +320,7 @@
             var categoryLink = $(".category-link.checked");
             var categoryValue = categoryLink.data("category-id");
 
-            var brandCheckbox = $(".brand-checkbox");
+            var brandCheckbox = $(".brand-checkbox.checked");
             var brandValue = brandCheckbox.data("brand-id");
 
             var minPrice = $("#price-slider").slider("values", 0);

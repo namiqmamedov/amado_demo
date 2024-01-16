@@ -1,12 +1,15 @@
 ﻿using Amado.DAL;
 using Amado.Models;
 using Amado.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Amado.Areas.admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class CheckoutController : Controller
     {
         private readonly AppDbContext _context;
@@ -19,7 +22,7 @@ namespace Amado.Areas.admin.Controllers
         }
         public async Task<IActionResult> Index(int page)
         {
-            IQueryable<Checkout> checkouts = _context.Checkouts.OrderBy(x => x.ID);
+            IQueryable<Checkout> checkouts = _context.Checkouts.Include(x=>x.Country).OrderBy(x => x.ID);
 
             return View(PageNationList<Checkout>.Create(checkouts, page, 5));
         }
@@ -29,7 +32,7 @@ namespace Amado.Areas.admin.Controllers
         {
             if (ID == null) return BadRequest();
 
-            Checkout checkout = await _context.Checkouts.FirstOrDefaultAsync(x => x.ID == ID);
+            Checkout checkout = await _context.Checkouts.Include(x=>x.Country).FirstOrDefaultAsync(x => x.ID == ID);
 
             if (checkout == null) return NotFound();
 

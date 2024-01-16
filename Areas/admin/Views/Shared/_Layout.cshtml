@@ -16,6 +16,7 @@
     <link href="~/admin/css/app.min.css" rel="stylesheet">
     <link href="~/admin/css/style-for.css" rel="stylesheet">
     <link href="~/admin/css/sweetalert2.min.css" rel="stylesheet">
+    <link href="~/admin/css/login.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
@@ -186,32 +187,9 @@
                                                     <span class="fw-bold text-dark">@User.Identity.Name</span>
                                                 }
 
-                                                @*@if (User.Identity.IsAuthenticated)
-                                                {
-                                                    <span class="font-size-sm">@User.Identity.</span>
-                                                }*@
-                                                
                                             </div>
                                         </div>
                                     </div>
-                                    @*<a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <i class="font-size-lg me-2 feather icon-user"></i>
-                                            <span>Profile</span>
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <i class="font-size-lg me-2 feather icon-settings"></i>
-                                            <span>Settings</span>
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <i class="font-size-lg me-2 feather icon-life-buoy"></i>
-                                            <span>Support</span>
-                                        </div>
-                                    </a>*@
                                     <a class="admin-logout" asp-controller="account" asp-action="logout" asp-area="admin">
                                         <div class="d-flex align-items-center">
                                             <i class="font-size-lg me-2 feather icon-power"></i>
@@ -230,42 +208,57 @@
             <!-- Side Nav START -->
             <div class="side-nav vertical-menu nav-menu-light scrollable">
                 <div class="nav-logo">
-                    <div class="w-100 logo">
-                        <img style="max-height: 70px;width: 63%;" class="img-fluid" src="~/admin/images/logo-gs-mono.svg">
-                    </div>
                     <div class="mobile-close">
                         <i class="icon-arrow-left feather"></i>
                     </div>
                 </div>
                 <ul class="nav-menu">
-                    @*<li class="nav-menu-item router-link-active">
-            <a asp-area="admin" asp-controller="home" asp-action="index">
-                <i class="feather icon-home"></i>
-                <span class="nav-menu-item-title">Dashboard</span>
-            </a>
-        </li>*@
                     <li class="nav-group-title">APPS</li>
                     <li class="nav-menu-item">
-                        <a asp-area="admin" asp-controller="blog" asp-action="index">
-                            <i class="feather icon-mail"></i>
-                            <span class="nav-menu-item-title">Blog</span>
+                        <a asp-area="admin" asp-controller="product" asp-action="index">
+                            <i class="fa-brands fa-product-hunt"></i>
+                            <span class="nav-menu-item-title">Product</span>
                         </a>
                     </li>
                     <li class="nav-menu-item">
                         <a asp-area="admin" asp-controller="category" asp-action="index">
-                            <i class="feather icon-message-circle"></i>
+                            <i class="fa-solid fa-layer-group"></i>
                             <span class="nav-menu-item-title">Category</span>
                         </a>
                     </li>
                     <li class="nav-menu-item">
-                        <a asp-area="admin" asp-controller="subcategory" asp-action="index">
-                            <i class="feather icon-message-circle"></i>
-                            <span class="nav-menu-item-title">Subcategory</span>
+                        <a asp-area="admin" asp-controller="brand" asp-action="index">
+                            <i class="fa-brands fa-bandcamp"></i>
+                            <span class="nav-menu-item-title">Brand</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a asp-area="admin" asp-controller="checkout" asp-action="index">
+                            <i class="fa-solid fa-money-check"></i>
+                            <span class="nav-menu-item-title">Checkout</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a asp-area="admin" asp-controller="color" asp-action="index">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="nav-menu-item-title">Color</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a asp-area="admin" asp-controller="country" asp-action="index">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            <span class="nav-menu-item-title">Country</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a asp-area="admin" asp-controller="subscriber" asp-action="index">
+                            <i class="fa-solid fa-play"></i>
+                            <span class="nav-menu-item-title">Subscriber</span>
                         </a>
                     </li>
                     <li class="nav-menu-item">
                         <a asp-area="admin" asp-controller="setting" asp-action="index">
-                            <i class="feather icon-calendar"></i>
+                            <i class="fa-solid fa-wrench"></i>
                             <span class="nav-menu-item-title">Setting</span>
                         </a>
                     </li>

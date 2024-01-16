@@ -1,11 +1,11 @@
 ﻿@model Product
 @{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "Read";
     SelectList selectListItems = new SelectList(ViewBag.Brands, nameof(Brand.ID), nameof(Brand.Name));
     SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category.ID), nameof(Category.Name));
 }
 
-<h1>Update</h1>
+<h1>Read</h1>
 
 <div class="content">
     <div class="main product-index">
@@ -38,13 +38,13 @@
                     <label asp-for="MainFile" class="form-label d-flex">Main Image</label>
                     <span class="text-danger" asp-validation-for="MainFile"></span>
 
-                    <img class="img-fluid mt-3 w-100 h-50" src="~/assets/img/products/@Model.MainImage"/>
+                    <img class="img-fluid mt-3 w-50 h-50" src="~/assets/img/products/@Model.MainImage"/>
                 </div>
                    <div class="form-group col-lg-6">
                     <label asp-for="HoverFile" class="form-label d-flex">Hover Image</label>
                     <span class="text-danger" asp-validation-for="HoverFile"></span>
                 
-                    <img class="img-fluid mt-3 w-75 h-50" src="~/assets/img/products/@Model.HoverImage"/>
+                    <img class="img-fluid mt-3 w-50 h-50" src="~/assets/img/products/@Model.HoverImage"/>
                 </div>
             </div>
                 <div class="form-group">
@@ -92,6 +92,10 @@
                         </div>
                     }
                 }
+
+                  <a class="btn btn-primary" asp-area="admin" asp-controller="product" asp-action="index">
+                      Back to menu
+                  </a>
             </div>
         </div>
     </div>

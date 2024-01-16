@@ -8,10 +8,39 @@
     <div class="main product-index">
         <div class="row">
             <form>
-              <div class="form-group">
-                 <label class="form-label" asp-for="FirstName">First name</label>
-                 <input class="form-control" disabled asp-for="FirstName" placeholder="Name...">
-              </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="FirstName">First name</label>
+                     <input class="form-control" disabled asp-for="FirstName" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="LastName">Last name</label>
+                     <input class="form-control" disabled asp-for="FirstName" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="Email">Email address</label>
+                     <input class="form-control" disabled asp-for="Email" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="Country">Country</label>
+                     <input class="form-control" disabled asp-for="Country.Name" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="Zip">Zip</label>
+                     <input class="form-control" disabled asp-for="Zip" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="Phone">Phone</label>
+                     <input class="form-control" disabled asp-for="Phone" placeholder="Name...">
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" asp-for="Comment">Comment</label>
+                     <textarea class="form-control" disabled asp-for="Comment" placeholder="Name...">
+                     </textarea>
+                  </div>
+
+                  <a class="btn btn-primary" asp-area="admin" asp-controller="checkout" asp-action="index">
+                      Back to menu
+                  </a>
             </form>
         </div>
     </div>

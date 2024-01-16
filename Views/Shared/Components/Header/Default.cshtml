@@ -1,0 +1,48 @@
+﻿@model HeaderVM
+@inject ILayoutServices layoutservices
+
+@{
+    Dictionary<string, string> settings = await layoutservices.GetSettingsAsync();
+    List<CartVM> cartVMs = await layoutservices.GetCart();
+}
+
+<header class="header-area clearfix">
+    <!-- Close Icon -->
+    <div class="nav-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <!-- Logo -->
+    <div class="logo">
+        <a href="~/assets/index.html"><img src="~/assets/img/core-img/@settings.FirstOrDefault(x=>x.Key == "HeaderLogo").Value" alt=""></a>
+    </div>
+    <!-- Amado Nav -->
+    <nav class="amado-nav">
+        <ul>
+            <li class="active"><a asp-controller="home" asp-action="index">Home</a></li>
+            <li><a asp-controller="shop" asp-action="index">Shop</a></li>
+            <li><a asp-controller="shop" asp-action="detail" asp-route-id="20">Product</a></li>
+            <li><a asp-controller="cart" asp-action="index">Cart</a></li>
+            <li><a asp-controller="checkout" asp-action="index">Checkout</a></li>
+        </ul>
+    </nav>
+    <!-- Button Group -->
+    <div class="amado-btn-group mt-30 mb-100">
+        <a href="~/assets/#" class="btn amado-btn mb-15">%Discount%</a>
+        <a href="~/assets/#" class="btn amado-btn active">New this week</a>
+    </div>
+    <!-- Cart Menu -->
+    <div class="cart-fav-search mb-100">
+        <div id="cart-info">
+            @await Html.PartialAsync("_CartPartial",cartVMs)
+        </div>
+        <a href="#" class="fav-nav"><img src="~/assets/img/core-img/favorites.png" alt=""> Favourite</a>
+        <a href="#" class="search-nav"><img src="~/assets/img/core-img/search.png" alt=""> Search</a>
+    </div>
+    <!-- Social Button -->
+    <div class="social-info d-flex justify-content-between">
+        <a href="~/assets/#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+        <a href="~/assets/#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="~/assets/#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="~/assets/#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    </div>
+</header>

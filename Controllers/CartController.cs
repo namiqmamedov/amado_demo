@@ -51,7 +51,7 @@ namespace Amado.Controllers
             return PartialView("_CartPartial", await _getCartItemAsync(cartVMs));   
         }
 
-        public async Task<IActionResult> addToCart(int? ID)
+        public async Task<IActionResult> addToCart(int? ID,int? value)
         {
             if (ID == null) return BadRequest();
 
@@ -73,6 +73,11 @@ namespace Amado.Controllers
                 cartVMs = new List<CartVM>();
             }
 
+            if (value != null && cartVMs.Any(x => x.ProductID == ID))
+            {
+                cartVMs.First(x => x.ProductID == ID).Count += value.Value;
+            }
+
             if (cartVMs.Exists(x => x.ProductID == ID))
             {
                 cartVMs.Find(x => x.ProductID == ID).Count++;
@@ -83,7 +88,7 @@ namespace Amado.Controllers
                 CartVM cartVM = new CartVM
                 {
                     ProductID = product.ID,
-                    Count = 1
+                    Count = value ?? 1
                 };
 
                 cartVMs.Add(cartVM);

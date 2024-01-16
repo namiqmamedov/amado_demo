@@ -18,25 +18,30 @@ namespace Amado.Models
         public int Count { get; set; }
         public string MainImage { get; set; }
         public string HoverImage { get; set; }
+        [Required]
 
         public int CategoryID { get; set; }
         public Category Category { get; set; }
+        [Required]
         public int BrandID { get; set; }
         public Brand Brand { get; set; }
 
         public List<ProductDescription> Description { get; set; }
-
         public List<ProductImage> ProductImages { get; set; }
         public List<ProductColor> ProductColors { get; set; }
 
         [NotMapped]
+        [Required]
         public List<string> ProductDescription { get; set; } = new List<string>();
 
         [NotMapped]
+        [Required]
         public IFormFile MainFile { get; set; }
         [NotMapped]
+        [Required]
         public IFormFile HoverFile { get; set; }
         [NotMapped]
+        [Required]
         [MaxLength(5)]
         public IEnumerable<IFormFile> Files { get; set; }
 

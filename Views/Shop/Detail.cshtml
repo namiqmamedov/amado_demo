@@ -1,0 +1,134 @@
+﻿@model ShopVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+        <!-- Product Details Area Start -->
+        <div class="single-product-area section-padding-100 clearfix">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mt-50">
+                                <li class="breadcrumb-item"><a asp-controller="home" asp-action="index">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">@Model.Product.Category.Name</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">@Model.Product.Name</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <div class="single_product_thumb">
+                            <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    @{ int index = 0; }
+    
+                                    @foreach (Product item in Model.Products)
+                                    {
+                                        <li data-target="#product_details_slider" data-slide-to="@index" style="background-image: url(/assets/img/products/@item.MainImage);">
+                                        </li>
+                                        <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(/assets/img/products/@item.HoverImage);">
+                                        </li>
+
+                                        index += 2; 
+                                    }
+
+                                    @foreach (ProductImage item in Model.Product.ProductImages)
+                                    {
+                                        <li data-target="#product_details_slider" data-slide-to="@index" style="background-image: url(/assets/img/products/@item.Image);">
+                                        </li>
+
+                                        index += 1; 
+                                    }
+                                </ol>
+                                <div class="carousel-inner">
+                                    @foreach (Product item in Model.Products)
+                                    {
+                                        <div class="carousel-item active">
+                                                <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
+                                                    <img class="d-block w-100" src="~/assets/img/products/@item.MainImage" alt="First slide">
+                                                </a>
+                                        </div>
+
+                                        <div class="carousel-item">
+                                                <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
+                                                    <img class="d-block w-100" src="~/assets/img/products/@item.HoverImage" alt="First slide">
+                                                </a>
+                                        </div>
+                                    }
+                                    @foreach (ProductImage item in Model.Product.ProductImages)
+                                    {
+                                        <div class="carousel-item">
+                                                <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
+                                                    <img class="d-block w-100" src="~/assets/img/products/@item.Image" alt="First slide">
+                                                </a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="single_product_desc">
+                            <!-- Product Meta Data -->
+                            <div class="product-meta-data">
+                                <div class="line"></div>
+                                <p class="product-price">$@Model.Product.Price</p>
+                                <a href="product-details.html">
+                                    <h6>@Model.Product.Name</h6>
+                                </a>
+                                <!-- Ratings & Review -->
+                                <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
+                                    <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="review">
+                                        <a href="#">Write A Review</a>
+                                    </div>
+                                </div>
+                                <!-- Avaiable -->
+                                @if(@Model.Product.Count > 0 )
+                                {
+                                <p class="avaibility"><i class="fa fa-circle"></i> In Stock</p>
+                                 }
+                                else
+                                {
+                                    <p class="text-danger">We don't have currently this product.</p>
+                                }
+
+                            </div>
+
+                             @if(@Model.Product.Count > 0 )
+                            {
+                            <div class="short_overview my-5">
+                                <p>
+                                    @Model.Product.Description.Select(x=>x.Text).FirstOrDefault()
+                                </p>
+                            </div>
+
+                            <!-- Add to Cart Form -->
+                            <form class="cart clearfix" method="post">
+                                <div class="cart-btn d-flex mb-50">
+                                    <p>Qty</p>
+                                    <div class="quantity">
+                                        <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1">
+                                        <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                                    </div>
+                                </div>
+                                <a asp-controller="cart" asp-action="addToCart" asp-route-id="@Model.Product.ID" name="addtocart" value="5" class="btn amado-btn addToCart1">Add to cart</a>
+                            </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

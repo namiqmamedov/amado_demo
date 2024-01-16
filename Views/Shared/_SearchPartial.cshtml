@@ -3,8 +3,8 @@
 @foreach(Product item in Model)
 {
     <li class="list-group-item d-flex align-items-center mb-3">
-                <img src="~/assets/img/products/@item.MainImage" style="width: 100px" alt="Image" />
-                <h5 class="ml-2">@item.Name</h5>
+             <img src="~/assets/img/products/@item.MainImage" style="width: 100px" alt="Image" />
+              <a href="~/shop/detail/@item.ID" class="ml-2">@item.Name</a>
     </li>
 }
 

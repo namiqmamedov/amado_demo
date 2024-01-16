@@ -1,9 +1,10 @@
 ﻿using Amado.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Amado.DAL
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -18,5 +19,7 @@ namespace Amado.DAL
         public DbSet<ProductDescription> Descriptions { get; set; }
         public DbSet<Checkout> Checkouts { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }

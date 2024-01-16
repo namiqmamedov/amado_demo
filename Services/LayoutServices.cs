@@ -18,6 +18,12 @@ namespace Amado.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public async Task<Dictionary<string, string>> GetSettingsAsync()
+        {
+            return await _context.Settings.
+                ToDictionaryAsync(s => s.Key, s => s.Value);
+        }
+
         public async Task<List<CartVM>> GetCart()
         {
             string cart = _httpContextAccessor.HttpContext.Request.Cookies["cart"];

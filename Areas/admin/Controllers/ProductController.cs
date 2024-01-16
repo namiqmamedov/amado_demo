@@ -1,23 +1,28 @@
 ﻿using Amado.DAL;
 using Amado.Extension;
 using Amado.Helpers;
+using Amado.Interface;
 using Amado.Models;
 using Amado.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Amado.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IEmailRepository _emailRepository;
 
-        public ProductController(AppDbContext context, IWebHostEnvironment env)
+        public ProductController(AppDbContext context, IWebHostEnvironment env,IEmailRepository emailRepository)
         {
             _context = context;
             _env = env;
+            _emailRepository = emailRepository;
         }
         public async Task<IActionResult> Index(int page)
         {
@@ -46,6 +51,12 @@ namespace Amado.Areas.admin.Controllers
             ViewBag.Colors = await _context.Colors.ToListAsync();
             ViewBag.Description = await _context.Descriptions.ToListAsync();
 
+            if (product.ProductDescription == null)
+            {
+                ModelState.AddModelError("ProductDescription", "Product description is required");
+
+                return View();
+            }
 
             if (!ModelState.IsValid) return View();
 
@@ -106,6 +117,12 @@ namespace Amado.Areas.admin.Controllers
             }
             product.ProductColors = productColors;
 
+            if (product.Counts.Count() == 0)
+            {
+                ModelState.AddModelError("Count", "Count must be higher than 0!");
+
+                return View();
+            }
 
             if (product.Files != null && product.Files.Count() > 4)
             {
@@ -202,8 +219,12 @@ namespace Amado.Areas.admin.Controllers
             product.Price = product.Price;
             product.Count = productColors.Sum(x => x.Count);
 
+            List<Subscriber> subscriber = await _context.Subscribers.ToListAsync();
+            
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
+
+            await _emailRepository.GenerateLinkForNewProduct(product);
 
             return RedirectToAction("Index");
         }

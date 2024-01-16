@@ -1,0 +1,31 @@
+﻿@model Subscriber
+
+@inject ILayoutServices layoutservices
+
+@{
+   Dictionary<string, string> settings = await layoutservices.GetSettingsAsync();
+}
+
+    <section class="newsletter-area section-padding-100-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Newsletter Text -->
+                <div class="col-12 col-lg-6 col-xl-7">
+                    <div class="newsletter-text mb-100">
+                        <h2>Subscribe for a <span>@settings.FirstOrDefault(x=>x.Key == "SubscribeDiscount").Value% Discount</span></h2>
+                        <p>@settings.FirstOrDefault(x=>x.Key == "SubscribeDescription").Value</p>
+                    </div>
+                </div>
+                <!-- Newsletter Form -->
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <div class="newsletter-form mb-100">
+                        <form asp-controller="subscriber" asp-action="subscribe" method="POST">
+                            <input asp-for="Email" name="email" class="nl-email" placeholder="Your E-mail">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

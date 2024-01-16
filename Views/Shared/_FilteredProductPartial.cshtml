@@ -6,9 +6,9 @@
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
                             <div class="product-img">
-                                <img src="~/assets/img/products/@product.MainImage" alt="Main Image">
+                                <img style="height: 510px;" src="~/assets/img/products/@product.MainImage" alt="Main Image">
                                 <!-- Hover Thumb -->
-                                <img class="hover-img" src="~/assets/img/products/@product.HoverImage" alt="Hover Image">
+                                <img style="height: 510px;" class="hover-img" src="~/assets/img/products/@product.HoverImage" alt="Hover Image">
                             </div>
 
                             <!-- Product Description -->
@@ -17,7 +17,7 @@
                                 <div class="product-meta-data">
                                     <div class="line"></div>
                                     <p class="product-price">$@product.Price</p>
-                                    <a href="product-details.html" id="productName">
+                                    <a asp-controller="shop" asp-action="detail" asp-route-id="@product.ID" id="productName">
                                         <h6>@product.Name</h6>
                                     </a>
                                 </div>
@@ -70,7 +70,6 @@
                               $('#cart-info').html(data);
                           });
                   })
-              });
-
+           });
    </script>
 

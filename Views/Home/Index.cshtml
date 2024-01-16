@@ -1,4 +1,25 @@
-﻿@{
+﻿@model List<Product>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
+ <div class="products-catagories-area clearfix">
+     <div class="amado-pro-catagory clearfix">
+                <!-- Single Catagory -->
+        @foreach (Product item in Model)
+        {
+                <div class="single-products-catagory clearfix">
+                    <a asp-controller="shop" asp-action="detail" asp-route-id="@item.ID">
+                        <img src="~/assets/img/products/@item.MainImage" alt="Main Image">
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <p>From @item.Price</p>
+                            <h4>@item.Name</h4>
+                        </div>
+                    </a>
+                </div>
+        }
+     </div>
+ </div>

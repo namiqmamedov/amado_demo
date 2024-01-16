@@ -16,6 +16,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\css\app.min.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\css\login.css))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>admin/css/login.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\css\login.css))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\css\style-for.css))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
@@ -2320,12 +2336,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\product-img\product6.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1bfa0cf5-8317-42e1-b534-a72fe3e7ddd9_202401101835002983_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\022f6e03-6c39-4512-81fd-b793595fbabc_202401151850033203_7.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/1bfa0cf5-8317-42e1-b534-a72fe3e7ddd9_202401101835002983_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/022f6e03-6c39-4512-81fd-b793595fbabc_202401151850033203_7.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2334,14 +2350,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1bfa0cf5-8317-42e1-b534-a72fe3e7ddd9_202401101835002983_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\022f6e03-6c39-4512-81fd-b793595fbabc_202401151850033203_7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e5ada28-9387-4e4b-8251-4ae23561ab10_202401101843153495_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\07b4bcab-ac35-4191-b891-67397c0d01e8_202401160757411866_pro-big-3.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/2e5ada28-9387-4e4b-8251-4ae23561ab10_202401101843153495_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/07b4bcab-ac35-4191-b891-67397c0d01e8_202401160757411866_pro-big-3.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2350,14 +2366,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e5ada28-9387-4e4b-8251-4ae23561ab10_202401101843153495_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\07b4bcab-ac35-4191-b891-67397c0d01e8_202401160757411866_pro-big-3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\31f0413e-5674-4a8f-b92a-b517add35708_202401101843153558_1686658514368.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\0daae8ea-17a0-455c-89fd-c07469cc810a_202401160757411843_product3.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/31f0413e-5674-4a8f-b92a-b517add35708_202401101843153558_1686658514368.jpg</RelativePath>
+      <RelativePath>assets/img/products/0daae8ea-17a0-455c-89fd-c07469cc810a_202401160757411843_product3.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2366,14 +2382,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\31f0413e-5674-4a8f-b92a-b517add35708_202401101843153558_1686658514368.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\0daae8ea-17a0-455c-89fd-c07469cc810a_202401160757411843_product3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\36416c26-ac7b-4c7a-9d58-dda52f14b3f1_202401101552304840_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\0ef2424e-4989-45d4-b9d8-501c3841aef7_202401151850033214_8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/36416c26-ac7b-4c7a-9d58-dda52f14b3f1_202401101552304840_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/0ef2424e-4989-45d4-b9d8-501c3841aef7_202401151850033214_8.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2382,14 +2398,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\36416c26-ac7b-4c7a-9d58-dda52f14b3f1_202401101552304840_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\0ef2424e-4989-45d4-b9d8-501c3841aef7_202401151850033214_8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\391baed9-6fd9-49fd-9378-824feebcfff8_202401101841082820_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\12ef0f0e-3d72-4c97-8322-8038cf765b95_202401151903224798_7.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/391baed9-6fd9-49fd-9378-824feebcfff8_202401101841082820_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/12ef0f0e-3d72-4c97-8322-8038cf765b95_202401151903224798_7.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2398,14 +2414,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\391baed9-6fd9-49fd-9378-824feebcfff8_202401101841082820_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\12ef0f0e-3d72-4c97-8322-8038cf765b95_202401151903224798_7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4495153b-7215-443a-a5b2-ba953ad49ac0_202401101834447283_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\14692a50-7edb-48d3-a157-f096a27a7fdb_202401160753396397_pro-big-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/4495153b-7215-443a-a5b2-ba953ad49ac0_202401101834447283_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/14692a50-7edb-48d3-a157-f096a27a7fdb_202401160753396397_pro-big-1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2414,14 +2430,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4495153b-7215-443a-a5b2-ba953ad49ac0_202401101834447283_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\14692a50-7edb-48d3-a157-f096a27a7fdb_202401160753396397_pro-big-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\44ee4020-6dcd-485d-a260-2ac89afe2f2c_202401111100330602_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1803eee4-1f90-4d5e-b644-d30fa2468819_202401160754194584_product1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/44ee4020-6dcd-485d-a260-2ac89afe2f2c_202401111100330602_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/1803eee4-1f90-4d5e-b644-d30fa2468819_202401160754194584_product1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2430,14 +2446,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\44ee4020-6dcd-485d-a260-2ac89afe2f2c_202401111100330602_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1803eee4-1f90-4d5e-b644-d30fa2468819_202401160754194584_product1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4fb49ac5-0cda-4ddd-b4cc-84eac903f391_202401101552304906_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1af40d2b-faa2-4408-bd26-f354d744ebc3_202401151848342675_4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/4fb49ac5-0cda-4ddd-b4cc-84eac903f391_202401101552304906_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/1af40d2b-faa2-4408-bd26-f354d744ebc3_202401151848342675_4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2446,14 +2462,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4fb49ac5-0cda-4ddd-b4cc-84eac903f391_202401101552304906_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1af40d2b-faa2-4408-bd26-f354d744ebc3_202401151848342675_4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\52a73cd8-d368-4e09-9428-af42683c9d61_202401101552304857_1704301210494.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1b3d7564-cccf-4752-89fb-8c67257b37cf_202401152012434409_5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/52a73cd8-d368-4e09-9428-af42683c9d61_202401101552304857_1704301210494.jpg</RelativePath>
+      <RelativePath>assets/img/products/1b3d7564-cccf-4752-89fb-8c67257b37cf_202401152012434409_5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2462,14 +2478,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\52a73cd8-d368-4e09-9428-af42683c9d61_202401101552304857_1704301210494.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1b3d7564-cccf-4752-89fb-8c67257b37cf_202401152012434409_5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\609401b7-989a-4f3f-a500-abee4dd63d9d_202401101549523959_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1c4d4029-bb51-49e4-9338-6e9c719cff53_202401160756529520_pro-big-2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/609401b7-989a-4f3f-a500-abee4dd63d9d_202401101549523959_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/1c4d4029-bb51-49e4-9338-6e9c719cff53_202401160756529520_pro-big-2.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2478,14 +2494,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\609401b7-989a-4f3f-a500-abee4dd63d9d_202401101549523959_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1c4d4029-bb51-49e4-9338-6e9c719cff53_202401160756529520_pro-big-2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\6d9780c5-4f9e-48ba-b090-04f3b42040f9_202401101551562018_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1d3172bf-e0f7-4868-8274-ae6349a09168_202401160749584647_pro-big-3.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/6d9780c5-4f9e-48ba-b090-04f3b42040f9_202401101551562018_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/1d3172bf-e0f7-4868-8274-ae6349a09168_202401160749584647_pro-big-3.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2494,14 +2510,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\6d9780c5-4f9e-48ba-b090-04f3b42040f9_202401101551562018_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\1d3172bf-e0f7-4868-8274-ae6349a09168_202401160749584647_pro-big-3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\70147bd8-95b5-4d26-a391-06c35554f5b3_202401101552139231_1686658514368.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\262daf24-c0f7-4a82-9d6f-a12f9ba158c5_202401151901274151_6.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/70147bd8-95b5-4d26-a391-06c35554f5b3_202401101552139231_1686658514368.jpg</RelativePath>
+      <RelativePath>assets/img/products/262daf24-c0f7-4a82-9d6f-a12f9ba158c5_202401151901274151_6.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2510,14 +2526,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\70147bd8-95b5-4d26-a391-06c35554f5b3_202401101552139231_1686658514368.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\262daf24-c0f7-4a82-9d6f-a12f9ba158c5_202401151901274151_6.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\76db1fe9-6496-45c5-8a3e-4f207fa837f1_202401111100330703_1704301210494.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\268247b2-1f28-48aa-82c7-52cf9c20a9ee_202401160757216413_product2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/76db1fe9-6496-45c5-8a3e-4f207fa837f1_202401111100330703_1704301210494.jpg</RelativePath>
+      <RelativePath>assets/img/products/268247b2-1f28-48aa-82c7-52cf9c20a9ee_202401160757216413_product2.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2526,14 +2542,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\76db1fe9-6496-45c5-8a3e-4f207fa837f1_202401111100330703_1704301210494.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\268247b2-1f28-48aa-82c7-52cf9c20a9ee_202401160757216413_product2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8032b6fd-3569-4ff7-92e5-c739a7f66dd4_202401101551275747_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\287be03c-d3bc-4bff-b603-28dc55dbc0d2_202401160754003383_pro-big-3.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/8032b6fd-3569-4ff7-92e5-c739a7f66dd4_202401101551275747_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/287be03c-d3bc-4bff-b603-28dc55dbc0d2_202401160754003383_pro-big-3.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2542,14 +2558,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8032b6fd-3569-4ff7-92e5-c739a7f66dd4_202401101551275747_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\287be03c-d3bc-4bff-b603-28dc55dbc0d2_202401160754003383_pro-big-3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\827b0134-903e-468d-8b63-16e40242064a_202401101551107929_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2b7651f8-6eab-4ab8-b8c2-24f5d9a804f4_202401160751241298_product4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/827b0134-903e-468d-8b63-16e40242064a_202401101551107929_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/2b7651f8-6eab-4ab8-b8c2-24f5d9a804f4_202401160751241298_product4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2558,14 +2574,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\827b0134-903e-468d-8b63-16e40242064a_202401101551107929_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2b7651f8-6eab-4ab8-b8c2-24f5d9a804f4_202401160751241298_product4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8847755d-2eb1-4ef0-995a-6e4b988d375c_202401101549524100_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e2b4a45-310b-420c-a7a0-db7d6fe1366c_202401160757216424_pro-big-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/8847755d-2eb1-4ef0-995a-6e4b988d375c_202401101549524100_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/2e2b4a45-310b-420c-a7a0-db7d6fe1366c_202401160757216424_pro-big-1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2574,14 +2590,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8847755d-2eb1-4ef0-995a-6e4b988d375c_202401101549524100_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e2b4a45-310b-420c-a7a0-db7d6fe1366c_202401160757216424_pro-big-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8ae403ef-74f4-49ca-a99b-55f795cc7510_202401101829550812_1704301210494.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e67bf07-0067-4ccc-8631-ca0998a2af64_202401160752165599_pro-big-2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/8ae403ef-74f4-49ca-a99b-55f795cc7510_202401101829550812_1704301210494.jpg</RelativePath>
+      <RelativePath>assets/img/products/2e67bf07-0067-4ccc-8631-ca0998a2af64_202401160752165599_pro-big-2.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2590,14 +2606,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8ae403ef-74f4-49ca-a99b-55f795cc7510_202401101829550812_1704301210494.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\2e67bf07-0067-4ccc-8631-ca0998a2af64_202401160752165599_pro-big-2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8b820c15-3ae4-4692-90a9-b52e0be34e87_202401101841082891_1686658514368.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\32be7708-716b-444b-89cd-c4bea79f0d64_202401160756353818_product5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/8b820c15-3ae4-4692-90a9-b52e0be34e87_202401101841082891_1686658514368.jpg</RelativePath>
+      <RelativePath>assets/img/products/32be7708-716b-444b-89cd-c4bea79f0d64_202401160756353818_product5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2606,14 +2622,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8b820c15-3ae4-4692-90a9-b52e0be34e87_202401101841082891_1686658514368.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\32be7708-716b-444b-89cd-c4bea79f0d64_202401160756353818_product5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\96b2d282-391c-4f51-adc4-a38e302a5bd5_202401101550053123_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\33f59846-2163-446d-bc01-3eb8b6c7a01e_202401160753199774_pro-big-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/96b2d282-391c-4f51-adc4-a38e302a5bd5_202401101550053123_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/33f59846-2163-446d-bc01-3eb8b6c7a01e_202401160753199774_pro-big-1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2622,14 +2638,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\96b2d282-391c-4f51-adc4-a38e302a5bd5_202401101550053123_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\33f59846-2163-446d-bc01-3eb8b6c7a01e_202401160753199774_pro-big-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9755cfe4-f3fe-4594-a20d-c615545b7ff6_202401111100330749_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\35582add-eae3-462b-b7c9-2e376a979122_202401151848342763_8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/9755cfe4-f3fe-4594-a20d-c615545b7ff6_202401111100330749_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/35582add-eae3-462b-b7c9-2e376a979122_202401151848342763_8.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2638,14 +2654,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9755cfe4-f3fe-4594-a20d-c615545b7ff6_202401111100330749_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\35582add-eae3-462b-b7c9-2e376a979122_202401151848342763_8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\991d9538-9745-455e-80bf-75e1fc42ba02_202401101552304829_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\37078956-8299-43b6-be4a-377c63a52529_202401151903224831_8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/991d9538-9745-455e-80bf-75e1fc42ba02_202401101552304829_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/37078956-8299-43b6-be4a-377c63a52529_202401151903224831_8.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2654,14 +2670,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\991d9538-9745-455e-80bf-75e1fc42ba02_202401101552304829_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\37078956-8299-43b6-be4a-377c63a52529_202401151903224831_8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c5f53eab-45ad-4913-ac5a-b35a523bd760_202401101551108067_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\44faa6c2-d664-458f-8449-9d468e47007d_202401160755422229_product4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/c5f53eab-45ad-4913-ac5a-b35a523bd760_202401101551108067_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/44faa6c2-d664-458f-8449-9d468e47007d_202401160755422229_product4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2670,14 +2686,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c5f53eab-45ad-4913-ac5a-b35a523bd760_202401101551108067_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\44faa6c2-d664-458f-8449-9d468e47007d_202401160755422229_product4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\cbcecb10-e43c-471f-9c00-b67b9d6ce6b9_202401111100330679_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4792f757-8e59-444b-8c60-a66d0fddfd74_202401160755132194_pro-big-2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/cbcecb10-e43c-471f-9c00-b67b9d6ce6b9_202401111100330679_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/4792f757-8e59-444b-8c60-a66d0fddfd74_202401160755132194_pro-big-2.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2686,14 +2702,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\cbcecb10-e43c-471f-9c00-b67b9d6ce6b9_202401111100330679_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4792f757-8e59-444b-8c60-a66d0fddfd74_202401160755132194_pro-big-2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\de9b57f7-6987-4961-83d7-9624181f0ca6_202401101551562001_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\48a787f1-0a25-4f28-91cb-d496a6de7573_202401152012434429_8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/de9b57f7-6987-4961-83d7-9624181f0ca6_202401101551562001_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/48a787f1-0a25-4f28-91cb-d496a6de7573_202401152012434429_8.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2702,14 +2718,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\de9b57f7-6987-4961-83d7-9624181f0ca6_202401101551562001_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\48a787f1-0a25-4f28-91cb-d496a6de7573_202401152012434429_8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dea36220-c590-4509-a6a6-cc818beb9119_202401101552139219_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4b3991d8-b837-4375-8def-489b6243cb7e_202401151859422751_9.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/dea36220-c590-4509-a6a6-cc818beb9119_202401101552139219_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/4b3991d8-b837-4375-8def-489b6243cb7e_202401151859422751_9.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2718,14 +2734,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dea36220-c590-4509-a6a6-cc818beb9119_202401101552139219_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4b3991d8-b837-4375-8def-489b6243cb7e_202401151859422751_9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dedccb9e-5233-4776-b74b-ad67437264c6_202401101827489258_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4f461c6f-4608-4885-acfe-6303fc34e890_202401152012434417_7.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/dedccb9e-5233-4776-b74b-ad67437264c6_202401101827489258_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/4f461c6f-4608-4885-acfe-6303fc34e890_202401152012434417_7.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2734,14 +2750,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dedccb9e-5233-4776-b74b-ad67437264c6_202401101827489258_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\4f461c6f-4608-4885-acfe-6303fc34e890_202401152012434417_7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e04a9a55-ee64-496a-b647-87a7a288f6e3_202401101827488878_Untitled.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\51a380a4-d75d-455f-82fa-8a32fd263ef4_202401160756529511_pro-big-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/e04a9a55-ee64-496a-b647-87a7a288f6e3_202401101827488878_Untitled.png</RelativePath>
+      <RelativePath>assets/img/products/51a380a4-d75d-455f-82fa-8a32fd263ef4_202401160756529511_pro-big-1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2750,14 +2766,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e04a9a55-ee64-496a-b647-87a7a288f6e3_202401101827488878_Untitled.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\51a380a4-d75d-455f-82fa-8a32fd263ef4_202401160756529511_pro-big-1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e48177f1-53df-42b9-a95e-6d3f96b9e8fb_202401101551275758_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5770209e-ad5c-4ce0-a866-a0161f12dfb0_202401160753199787_pro-big-4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/e48177f1-53df-42b9-a95e-6d3f96b9e8fb_202401101551275758_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/5770209e-ad5c-4ce0-a866-a0161f12dfb0_202401160753199787_pro-big-4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2766,14 +2782,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e48177f1-53df-42b9-a95e-6d3f96b9e8fb_202401101551275758_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5770209e-ad5c-4ce0-a866-a0161f12dfb0_202401160753199787_pro-big-4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e6f92e3d-30d7-4029-9cf4-f3670971f7a1_202401101841319805_1679966644697.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5c2f2439-7938-45a2-9dce-a39f7e8905ce_202401151859422739_7.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/e6f92e3d-30d7-4029-9cf4-f3670971f7a1_202401101841319805_1679966644697.jpg</RelativePath>
+      <RelativePath>assets/img/products/5c2f2439-7938-45a2-9dce-a39f7e8905ce_202401151859422739_7.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2782,14 +2798,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e6f92e3d-30d7-4029-9cf4-f3670971f7a1_202401101841319805_1679966644697.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5c2f2439-7938-45a2-9dce-a39f7e8905ce_202401151859422739_7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ed5e09e1-d3d5-4ed7-9b58-d2a5bbed0dcc_202401101550053096_1589948978349.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5feb5eff-77e3-4d54-91a0-10f148c8cf6f_202401151848342744_5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Amado</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amado</BasePath>
-      <RelativePath>assets/img/products/ed5e09e1-d3d5-4ed7-9b58-d2a5bbed0dcc_202401101550053096_1589948978349.jpg</RelativePath>
+      <RelativePath>assets/img/products/5feb5eff-77e3-4d54-91a0-10f148c8cf6f_202401151848342744_5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2798,7 +2814,791 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ed5e09e1-d3d5-4ed7-9b58-d2a5bbed0dcc_202401101550053096_1589948978349.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\5feb5eff-77e3-4d54-91a0-10f148c8cf6f_202401151848342744_5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\62baa2ff-f5e9-467d-9bbc-e63ea5dfc81e_202401160751241319_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/62baa2ff-f5e9-467d-9bbc-e63ea5dfc81e_202401160751241319_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\62baa2ff-f5e9-467d-9bbc-e63ea5dfc81e_202401160751241319_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\62e3ab08-8137-409c-a680-3d1c4d5005eb_202401160756529498_product6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/62e3ab08-8137-409c-a680-3d1c4d5005eb_202401160756529498_product6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\62e3ab08-8137-409c-a680-3d1c4d5005eb_202401160756529498_product6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\69860804-3ee7-4db2-9f9e-09f3644cd86a_202401160756353843_pro-big-3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/69860804-3ee7-4db2-9f9e-09f3644cd86a_202401160756353843_pro-big-3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\69860804-3ee7-4db2-9f9e-09f3644cd86a_202401160756353843_pro-big-3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7038953e-a194-4ca4-a313-642756eea644_202401151859422682_5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/7038953e-a194-4ca4-a313-642756eea644_202401151859422682_5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7038953e-a194-4ca4-a313-642756eea644_202401151859422682_5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7b576a03-a2d3-4a11-bca1-51f1b13b3f54_202401152014481293_6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/7b576a03-a2d3-4a11-bca1-51f1b13b3f54_202401152014481293_6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7b576a03-a2d3-4a11-bca1-51f1b13b3f54_202401152014481293_6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7c8c616e-5093-4d29-8b41-a9a9a7afb3df_202401150239114925_4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/7c8c616e-5093-4d29-8b41-a9a9a7afb3df_202401150239114925_4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7c8c616e-5093-4d29-8b41-a9a9a7afb3df_202401150239114925_4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7cb16fc3-4bfb-4d3b-a83e-7769fcb20aea_202401151901274163_8.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/7cb16fc3-4bfb-4d3b-a83e-7769fcb20aea_202401151901274163_8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7cb16fc3-4bfb-4d3b-a83e-7769fcb20aea_202401151901274163_8.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7eaa9c6f-8bc3-48e0-b8c0-8dccdd09bf84_202401150239115002_7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/7eaa9c6f-8bc3-48e0-b8c0-8dccdd09bf84_202401150239115002_7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\7eaa9c6f-8bc3-48e0-b8c0-8dccdd09bf84_202401150239115002_7.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\864187de-6104-4514-bd2c-8f6482b4a85a_202401160755132184_pro-big-1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/864187de-6104-4514-bd2c-8f6482b4a85a_202401160755132184_pro-big-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\864187de-6104-4514-bd2c-8f6482b4a85a_202401160755132184_pro-big-1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\882a0d43-629c-4d7c-84fa-5dc8a0cb3085_202401151850033188_4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/882a0d43-629c-4d7c-84fa-5dc8a0cb3085_202401151850033188_4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\882a0d43-629c-4d7c-84fa-5dc8a0cb3085_202401151850033188_4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\89e7a0bf-93eb-400f-a6f1-46afe450ce31_202401152014481707_4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/89e7a0bf-93eb-400f-a6f1-46afe450ce31_202401152014481707_4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\89e7a0bf-93eb-400f-a6f1-46afe450ce31_202401152014481707_4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8af67561-888f-4221-ad16-b7195daa4dfc_202401151903224723_5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/8af67561-888f-4221-ad16-b7195daa4dfc_202401151903224723_5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8af67561-888f-4221-ad16-b7195daa4dfc_202401151903224723_5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8eb91a87-40ff-4628-9e21-91f99a36213b_202401152011321313_7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/8eb91a87-40ff-4628-9e21-91f99a36213b_202401152011321313_7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8eb91a87-40ff-4628-9e21-91f99a36213b_202401152011321313_7.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8fd57985-f3fd-4500-bfea-b9ce11a0815f_202401160755422246_product5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/8fd57985-f3fd-4500-bfea-b9ce11a0815f_202401160755422246_product5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\8fd57985-f3fd-4500-bfea-b9ce11a0815f_202401160755422246_product5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\903092c0-d8b4-4fb6-a020-f3f13c22e9e8_202401160752165583_product6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/903092c0-d8b4-4fb6-a020-f3f13c22e9e8_202401160752165583_product6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\903092c0-d8b4-4fb6-a020-f3f13c22e9e8_202401160752165583_product6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9439cc29-b200-4132-8899-0350e35896ed_202401160757411855_pro-big-1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/9439cc29-b200-4132-8899-0350e35896ed_202401160757411855_pro-big-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9439cc29-b200-4132-8899-0350e35896ed_202401160757411855_pro-big-1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\95480a38-9cca-4110-85f9-445b8ce3bd47_202401150239115013_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/95480a38-9cca-4110-85f9-445b8ce3bd47_202401150239115013_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\95480a38-9cca-4110-85f9-445b8ce3bd47_202401150239115013_9.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\96745d34-9aa0-43a9-a2fb-2ca2856e394a_202401160749584633_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/96745d34-9aa0-43a9-a2fb-2ca2856e394a_202401160749584633_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\96745d34-9aa0-43a9-a2fb-2ca2856e394a_202401160749584633_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\979cdb32-c6c5-4e17-afa2-d9b9950aac5b_202401160751240869_product2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/979cdb32-c6c5-4e17-afa2-d9b9950aac5b_202401160751240869_product2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\979cdb32-c6c5-4e17-afa2-d9b9950aac5b_202401160751240869_product2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\982f1fa5-4b4a-419d-a4b0-21a34bc67d75_202401160749584659_pro-big-4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/982f1fa5-4b4a-419d-a4b0-21a34bc67d75_202401160749584659_pro-big-4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\982f1fa5-4b4a-419d-a4b0-21a34bc67d75_202401160749584659_pro-big-4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\98b02b09-1f5a-4b54-94b0-8071ed6c746f_202401160756529491_product4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/98b02b09-1f5a-4b54-94b0-8071ed6c746f_202401160756529491_product4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\98b02b09-1f5a-4b54-94b0-8071ed6c746f_202401160756529491_product4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\99513637-9f80-4d40-beee-a339bf3ff2d3_202401142041303087_cart2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/99513637-9f80-4d40-beee-a339bf3ff2d3_202401142041303087_cart2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\99513637-9f80-4d40-beee-a339bf3ff2d3_202401142041303087_cart2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9b113428-c866-4c9f-9a83-150395d6d2af_202401160751241310_pro-big-1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/9b113428-c866-4c9f-9a83-150395d6d2af_202401160751241310_pro-big-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9b113428-c866-4c9f-9a83-150395d6d2af_202401160751241310_pro-big-1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9b28e6ea-14cc-4595-b211-cf219ceb54f4_202401160757216434_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/9b28e6ea-14cc-4595-b211-cf219ceb54f4_202401160757216434_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9b28e6ea-14cc-4595-b211-cf219ceb54f4_202401160757216434_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9e5d07fe-9111-4fda-869d-9d4ea3addc7b_202401160757216402_product6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/9e5d07fe-9111-4fda-869d-9d4ea3addc7b_202401160757216402_product6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\9e5d07fe-9111-4fda-869d-9d4ea3addc7b_202401160757216402_product6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\a06a06c2-d99d-485d-892f-2820dac1f9f2_202401142040574272_8.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/a06a06c2-d99d-485d-892f-2820dac1f9f2_202401142040574272_8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\a06a06c2-d99d-485d-892f-2820dac1f9f2_202401142040574272_8.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\a852bda1-9d4b-4a37-be24-dfe44b4fc3e1_202401160754194594_product6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/a852bda1-9d4b-4a37-be24-dfe44b4fc3e1_202401160754194594_product6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\a852bda1-9d4b-4a37-be24-dfe44b4fc3e1_202401160754194594_product6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ac5c4eef-4bc1-4e5c-ab1e-e9aec8759296_202401160752165615_pro-big-3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/ac5c4eef-4bc1-4e5c-ab1e-e9aec8759296_202401160752165615_pro-big-3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ac5c4eef-4bc1-4e5c-ab1e-e9aec8759296_202401160752165615_pro-big-3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ad388119-ccff-45df-85a5-40b9975ea59d_202401160754476227_product4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/ad388119-ccff-45df-85a5-40b9975ea59d_202401160754476227_product4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ad388119-ccff-45df-85a5-40b9975ea59d_202401160754476227_product4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ae58c634-cb93-445b-ba2d-5e844a7b0474_202401142041527406_4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/ae58c634-cb93-445b-ba2d-5e844a7b0474_202401142041527406_4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\ae58c634-cb93-445b-ba2d-5e844a7b0474_202401142041527406_4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b037c867-fdb3-4ce7-83b9-e7d2ab71dd3f_202401160753396406_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/b037c867-fdb3-4ce7-83b9-e7d2ab71dd3f_202401160753396406_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b037c867-fdb3-4ce7-83b9-e7d2ab71dd3f_202401160753396406_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b2e8b63d-88f9-4e41-9488-803b43bf60ff_202401151909558991_6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/b2e8b63d-88f9-4e41-9488-803b43bf60ff_202401151909558991_6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b2e8b63d-88f9-4e41-9488-803b43bf60ff_202401151909558991_6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b6a7bb1f-4e9f-4b1c-b1de-e0301f62385b_202401160749584560_pro-big-1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/b6a7bb1f-4e9f-4b1c-b1de-e0301f62385b_202401160749584560_pro-big-1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\b6a7bb1f-4e9f-4b1c-b1de-e0301f62385b_202401160749584560_pro-big-1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c25abf2a-ba8c-4bea-93ad-dd43ceae8198_202401160755132164_product6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/c25abf2a-ba8c-4bea-93ad-dd43ceae8198_202401160755132164_product6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c25abf2a-ba8c-4bea-93ad-dd43ceae8198_202401160755132164_product6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c61c6b6f-344d-4abc-b7d9-8dacb862fd46_202401160755132174_product3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/c61c6b6f-344d-4abc-b7d9-8dacb862fd46_202401160755132174_product3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c61c6b6f-344d-4abc-b7d9-8dacb862fd46_202401160755132174_product3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c9db3856-9c69-473e-9563-83c1579c43d5_202401151909559003_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/c9db3856-9c69-473e-9563-83c1579c43d5_202401151909559003_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\c9db3856-9c69-473e-9563-83c1579c43d5_202401151909559003_9.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\cd86235e-d512-40f0-8f5f-cb972608c206_202401160756353833_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/cd86235e-d512-40f0-8f5f-cb972608c206_202401160756353833_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\cd86235e-d512-40f0-8f5f-cb972608c206_202401160756353833_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\d0fec4f3-bd5c-4395-aa1a-450c86d8fffa_202401152011321301_7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/d0fec4f3-bd5c-4395-aa1a-450c86d8fffa_202401152011321301_7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\d0fec4f3-bd5c-4395-aa1a-450c86d8fffa_202401152011321301_7.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\d3adef23-04db-4cc3-b5dd-196129119d56_202401160752165591_product4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/d3adef23-04db-4cc3-b5dd-196129119d56_202401160752165591_product4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\d3adef23-04db-4cc3-b5dd-196129119d56_202401160752165591_product4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dd8f02cf-8b47-453d-a0b1-6e41bebc9505_202401151909558927_5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/dd8f02cf-8b47-453d-a0b1-6e41bebc9505_202401151909558927_5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\dd8f02cf-8b47-453d-a0b1-6e41bebc9505_202401151909558927_5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e5633489-2857-4396-abc6-5153c94f77dd_202401151901274172_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/e5633489-2857-4396-abc6-5153c94f77dd_202401151901274172_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e5633489-2857-4396-abc6-5153c94f77dd_202401151901274172_9.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e8182e1e-d6f4-468b-8d2c-5aaf8b90a67a_202401160754194613_pro-big-3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/e8182e1e-d6f4-468b-8d2c-5aaf8b90a67a_202401160754194613_pro-big-3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e8182e1e-d6f4-468b-8d2c-5aaf8b90a67a_202401160754194613_pro-big-3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e914b011-4f86-4ec7-87b1-469143263ed3_202401151850033195_6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/e914b011-4f86-4ec7-87b1-469143263ed3_202401151850033195_6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e914b011-4f86-4ec7-87b1-469143263ed3_202401151850033195_6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e9e9dec5-4630-49c1-ac46-085dcfe2d2f2_202401160754003394_pro-big-4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/e9e9dec5-4630-49c1-ac46-085dcfe2d2f2_202401160754003394_pro-big-4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\e9e9dec5-4630-49c1-ac46-085dcfe2d2f2_202401160754003394_pro-big-4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eb1b2e25-7896-4ba5-8834-71cec88cd6c8_202401151848342755_7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/eb1b2e25-7896-4ba5-8834-71cec88cd6c8_202401151848342755_7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eb1b2e25-7896-4ba5-8834-71cec88cd6c8_202401151848342755_7.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eb964c9b-ca0a-4d62-839c-4adc346ce12e_202401152011321308_8.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/eb964c9b-ca0a-4d62-839c-4adc346ce12e_202401152011321308_8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eb964c9b-ca0a-4d62-839c-4adc346ce12e_202401152011321308_8.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eba31bdf-d5e4-495f-839c-cc380ef5f7c0_202401160754194604_pro-big-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/eba31bdf-d5e4-495f-839c-cc380ef5f7c0_202401160754194604_pro-big-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\eba31bdf-d5e4-495f-839c-cc380ef5f7c0_202401160754194604_pro-big-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\f1563ce3-0398-40e4-a4de-e80fdfd94173_202401160754476238_product5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/f1563ce3-0398-40e4-a4de-e80fdfd94173_202401160754476238_product5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\f1563ce3-0398-40e4-a4de-e80fdfd94173_202401160754476238_product5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\f8aa3673-842e-4758-8d0f-13615e94dda9_202401152014481718_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Amado</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Amado</BasePath>
+      <RelativePath>assets/img/products/f8aa3673-842e-4758-8d0f-13615e94dda9_202401152014481718_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\products\f8aa3673-842e-4758-8d0f-13615e94dda9_202401152014481718_9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\js\active.js))">
       <SourceType>Package</SourceType>

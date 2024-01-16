@@ -10,71 +10,65 @@ SelectList selectListItems2 = new SelectList(ViewBag.Categories, nameof(Category
     <div class="main product-index">
         <div class="row">
             <form method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-         <label asp-for="Name">Name</label>
-         <input asp-for="Name" placeholder="Name...">
-         <span class="text-danger" asp-validation-for="Name"></span>
-      </div>
-      <div class="form-group">
-         <label asp-for="Price">Price</label>
-         <input asp-for="Price" placeholder="Price...">
-         <span class="text-danger" asp-validation-for="Price"></span>
-      </div>
-      <div class="form-group">
-        @* <label asp-for="Description">Price</label>
-         <input asp-for="Price" placeholder="Price...">
-         <span class="text-danger" asp-validation-for="Price"></span>*@
-         <textarea rows="200" asp-for="ProductDescription">
-
-         </textarea>
-      </div>
-
-      <div class="form-group">
-         <label asp-for="MainFile">Main Image</label>
-         <input asp-for="MainFile" placeholder="Main Image...">
-         <span class="text-danger" asp-validation-for="MainFile"></span>
-      </div>
-        <div class="form-group">
-         <label asp-for="HoverFile">Hover Image</label>
-         <input asp-for="HoverFile" placeholder="Main Image...">
-         <span class="text-danger" asp-validation-for="HoverFile"></span>
-      </div>
-      <div class="form-group">
-         <label asp-for="Files">Image</label>
-         <input asp-for="Files" multiple placeholder="Main Image...">
-         <span class="text-danger" asp-validation-for="Files"></span>
-      </div>
-      <div class="form-group">
-         <label asp-for="BrandID">Brand ID</label>
-         <select asp-for="BrandID" class="form-select" asp-items=@selectListItems aria-label="Default select example">
-         </select>
-         <option value="">Select Main Category</option>
-         <span class="text-danger" asp-validation-for="BrandID"></span>
-      </div>
-      <div class="form-group">
-         <label asp-for="CategoryID">Category ID</label>
-         <select asp-for="CategoryID" class="form-select" asp-items=@selectListItems2 aria-label="Default select example">
-         </select>
-         <option value="">Select Main Category</option>
-         <span class="text-danger" asp-validation-for="CategoryID"></span>
-      </div>
-        <div class="row justify-content-center">
-             <div class="select-main row col-lg-12">
-                    <div class="form-group col-lg-4">
-                    <label asp-for="ColorIDs">Colors</label>
-                    <select name="ColorIDs" class="form-select"  asp-items="new SelectList(ViewBag.Colors,nameof(Color.ID),nameof(Color.Name))" aria-label="Default select example">
-                    </select>
-                 </div>
-                 <div class="form-group col-lg-4">
-                    <label>Count</label>
-                    <input name="Counts" placeholder="Count...">
-                    <span class="text-danger" asp-validation-for="Count"></span>
-                 </div>
+              <div class="form-group">
+                 <label class="form-label" asp-for="Name">Name</label>
+                 <input class="form-control" asp-for="Name" placeholder="Name...">
+                 <span class="text-danger" asp-validation-for="Name"></span>
               </div>
-              @*<a asp-area="admin" asp-controller="product" asp-action="ColorSizeItem" class="btn btn-primary addInput">Add</a>*@
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
-   </form>
+              <div class="form-group">
+                 <label class="form-label" asp-for="Price">Price</label>
+                 <input class="form-control" asp-for="Price" placeholder="Price...">
+                 <span class="text-danger" asp-validation-for="Price"></span>
+              </div>
+              <div class="form-group">
+                 <label class="form-label" asp-for="ProductDescription">Description</label>
+                 <textarea class="form-control" asp-for="ProductDescription">
+                 </textarea>
+                 <span class="text-danger" asp-validation-for="ProductDescription"></span>
+              </div>
+              <div class="form-group">
+                 <label asp-for="MainFile">Main Image</label>
+                 <input class="form-control" asp-for="MainFile" placeholder="Main Image...">
+                 <span class="text-danger" asp-validation-for="MainFile"></span>
+              </div>
+              <div class="form-group">
+                 <label asp-for="HoverFile">Hover Image</label>
+                 <input class="form-control" asp-for="HoverFile" placeholder="Main Image...">
+                 <span class="text-danger" asp-validation-for="HoverFile"></span>
+              </div>
+              <div class="form-group">
+                 <label asp-for="Files">Image</label>
+                 <input class="form-control" asp-for="Files" multiple placeholder="Main Image...">
+                 <span class="text-danger" asp-validation-for="Files"></span>
+              </div>
+              <div class="form-group">
+                 <label asp-for="BrandID">Select Brand</label>
+                 <select asp-for="BrandID" class="form-select" asp-items=@selectListItems aria-label="Default select example">
+                 </select>
+                 <span class="text-danger" asp-validation-for="BrandID"></span>
+              </div>
+              <div class="form-group">
+                 <label asp-for="CategoryID">Select Category</label>
+                 <select asp-for="CategoryID" class="form-select" asp-items=@selectListItems2 aria-label="Default select example">
+                 </select>
+                 <span class="text-danger" asp-validation-for="CategoryID"></span>
+              </div>
+              <div class="row justify-content-center">
+                     <div class="select-main row col-lg-12">
+                            <div class="form-group col-lg-4">
+                            <label asp-for="ColorIDs">Colors</label>
+                            <select name="ColorIDs" class="form-select" asp-items="new SelectList(ViewBag.Colors,nameof(Color.ID),nameof(Color.Name))" aria-label="Default select example">
+                            </select>
+                         </div>
+                         <div class="form-group col-lg-4">
+                            <label class="mb-2">Count</label>
+                            <input class="form-control" name="Counts" placeholder="Count...">
+                            <span class="text-danger" asp-validation-for="Count"></span>
+                         </div>
+                      </div>
+                </div>
+              <button type="submit" class="btn btn-primary">Create</button>
+            </form>
         </div>
     </div>
 </div>

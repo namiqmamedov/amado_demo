@@ -26,6 +26,8 @@
 $(document).on('click', '.minusCount', function (e) {
     e.preventDefault();
 
+    debugger
+
     let inputCount = $(this).next().val();
 
     if (inputCount >= 2) {
@@ -86,6 +88,22 @@ $(document).on('click', '.remove-item', function (e) {
         $('#cartIndex').html(data);
     })
 })
+
+
+$(document).ready(function () {
+    $('.addToCart1').click(function (e) {
+        e.preventDefault();
+
+        let quantity = $('#qty').val();
+
+        let url = $(this).attr('href') + '?value=' + quantity;
+
+        fetch(url).then(res => res.text())
+            .then(data => {
+                $('#cart-info').html(data);
+            });
+    });
+});
 
 
 
